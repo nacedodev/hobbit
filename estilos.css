@@ -2,21 +2,25 @@
   font-family: aniron;
   src: url(aniron.ttf);
 }
+
 @font-face {
   font-family: elfico;
   src: url(elvish.otf);
 }
+
 body{
 	background-image: url('img/la_comarca.jpg');
 	background-repeat: no-repeat;
-  background-size: auto;
+  	background-size: auto;
 }
+
 h1{
 	font-family: aniron, sans-serif;
 	color: white;
 	font-size: 3rem;
 	margin: 0 0 0 5%;
 }
+
 div{
 	border: 1px solid black;
 	margin: 10% 5% 0 40%;
