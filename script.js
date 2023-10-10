@@ -20,6 +20,6 @@ console.log(bilbo)
 console.log(gandalf)
 
 gandalf.hablar('Buenos dias mi viejo amigo')
-bilbo.hablar('Gandalf, me alegro de verte!')
+bilbo.hablar('Gandalf , me alegro de verte!')
 
 
