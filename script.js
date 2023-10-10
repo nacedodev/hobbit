@@ -16,7 +16,6 @@ let gandalf = new Personaje('Gandalf el Gris',razas.humano,clases.mago)
 let lampara = new Item('Lámpara de mesa azul')
 let reloj = new Item('Reloj del abuelo')
 
-//document.getElementById('divHistoria').innerHTML += 'De pronto en la casa apareciaeron ...' //TAREA
 //CREACION DE ENANOS
 let thorin = new Enano('Thorin Escudo de Roble',clases.guerrero)
 let kili = new Enano('Kili')
