@@ -7,7 +7,7 @@ export class Personaje {
     #clase = null
     #inventario = null
 
-    constructor(nombre , raza , clase = null){ // CLASE = NULL ES DARLE UN VALOR POR DEFECTO
+    constructor(nombre , raza = null, clase = null){ // CLASE = NULL ES DARLE UN VALOR POR DEFECTO
         this.#nombre = nombre
         this.#raza = raza
         this.#clase = clase

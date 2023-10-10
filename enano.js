@@ -7,11 +7,13 @@ export class Enano extends Personaje{ //HERENCIA , DESTACAR EL USO DEL SUPER() E
     static alabarRey(){
         return `Viva ${Enano.rey}`
     }
+    static numEnanos = 0; 
     #colorBarba = null
     
     constructor(nombre , clase = null , colorBarba = 'Blanca'){
         super(nombre , razas.enano, clase)
         this.#colorBarba = colorBarba
+        Enano.numEnanos++
     }
 
 
