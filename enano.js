@@ -16,7 +16,6 @@ export class Enano extends Personaje{ //HERENCIA , DESTACAR EL USO DEL SUPER() E
         Enano.numEnanos++
     }
 
-
     picar(){
 
     }
