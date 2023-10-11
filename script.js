@@ -6,7 +6,7 @@ import {Enano} from './enano.js'
 //NARRADOR
 let narrador = new Personaje('Narrador')
 
-// CREACION DE BILBO
+// CREACION DE BILBO 
 let bilbo = new Personaje('Bilbo Bolsón',razas.hobbit)
 
 // CREACION DE GANDALF
