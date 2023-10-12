@@ -1,28 +1,23 @@
 
 
 export class Escena {
-    constructor(nombre) {
-      this.nombre = nombre;
-      this.personajes = [];
-      this.acciones = [];
-    }
-  
-    agregarPersonaje(personaje) {
-      this.personajes.push(personaje);
-    }
-  
-    agregarAccion(accion) {
-      this.acciones.push(accion);
-    }
-  
-    reproducir() {
-      console.log(`----- ${this.nombre} -----`);
-      for (const personaje of this.personajes) {
-        personaje.hablar();
-      }
-      for (const accion of this.acciones) {
-        accion.ejecutar();
-      }
-    }
+
+  titulo = null;
+  lugar = null;
+
+  constructor(titulo,lugar) {
+    this.titulo = titulo
+    this.lugar = lugar
+    this.personajes = new Map()
+    this.items = []
   }
+
+  addCharacter(personaje) {
+    this.personajes.set(personaje.getNombre(), personaje)
+  }
+
+  addItem(item){
+    this.items.push(item)
+  }
+}
   

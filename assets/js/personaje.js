@@ -20,7 +20,7 @@ export class Personaje {
       document.getElementById('historia').innerHTML += textoMejorado;
     }, Personaje.timeout);
 
-    Personaje.timeout += 1000; // Incrementa el contador global
+    Personaje.timeout += 150; // Incrementa el contador global
   }
 
   coger(item) {
@@ -33,5 +33,9 @@ export class Personaje {
 
     this.#inventario.delete(item);
     personaje.coger(item);
+  }
+
+  getNombre() {
+    return this.#nombre;
   }
 }
