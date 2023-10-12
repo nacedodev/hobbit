@@ -35,7 +35,11 @@ export class Personaje {
     personaje.coger(item);
   }
 
-  getNombre() {
+  getName() {
     return this.#nombre;
+  }
+
+  getInventario() {
+    return this.#inventario
   }
 }

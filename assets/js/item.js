@@ -6,4 +6,8 @@ export class Item{
     constructor(nombre){
         this.#nombre = nombre
     }
+
+    getName(){
+        return this.#nombre
+    }
 }

@@ -9,15 +9,15 @@ export class Escena {
     this.titulo = titulo
     this.lugar = lugar
     this.personajes = new Map()
-    this.items = []
+    this.items = new Map()
   }
 
   addCharacter(personaje) {
-    this.personajes.set(personaje.getNombre(), personaje)
+    this.personajes.set(personaje.getName(), personaje)
   }
 
   addItem(item){
-    this.items.push(item)
+    this.items.set(item.getName(),item)
   }
 }
   
