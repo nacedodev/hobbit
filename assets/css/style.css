@@ -13,11 +13,15 @@ div{
     margin: 0 auto;
 }
 
-p{
+#title{
     background-color: rgba(128, 128, 128, 0.214);
     padding: 8px;
     border-radius: 15px;
     font-size: 1.5rem;
+}
+
+p{
+  margin: auto 0;
 }
 
 span{
@@ -32,7 +36,7 @@ span:hover{
 
 .fadein {
     opacity: 0;
-    animation: fadeinanimation 1s ease-in-out;
+    animation: fadeinanimation 1s ease-in-out forwards;
   }
   
   @keyframes fadeinanimation {

@@ -17,7 +17,10 @@ export class Personaje {
   hablar(text) {
     setTimeout(() => {
       let textoMejorado = `<br/><br/> <span>${this.#nombre}:</span> "${text}"`;
-      document.getElementById('historia').innerHTML += textoMejorado;
+      const lineElement = document.createElement('p');
+      lineElement.innerHTML = textoMejorado;
+      lineElement.classList.add('fadein'); // Aplicar la clase para el efecto de fadeIn
+      historia.appendChild(lineElement);
     }, Personaje.timeout);
 
     Personaje.timeout += 150; // Incrementa el contador global
@@ -39,7 +42,7 @@ export class Personaje {
     return this.#nombre;
   }
 
-  getInventario() {
+  getInventario(item) {
     return this.#inventario
   }
 }
