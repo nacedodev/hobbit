@@ -6,9 +6,8 @@ import {Escena} from './escena.js'
 import { escenas } from './manager.js'
 
 
-//ESCENA 1
-escenas[1].run()
 
+escenas[1].run()
 
 
  setTimeout(() => {
@@ -16,7 +15,7 @@ escenas[1].run()
      if(respuesta === 'Nacho') {
          escenas[2].run()
      }
- }, Personaje.timeout + 2000);
+ }, Personaje.timeout + 2000) ;
 
 
 

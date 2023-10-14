@@ -21,9 +21,11 @@ export class Personaje {
       lineElement.innerHTML = textoMejorado;
       lineElement.classList.add('fadein'); // Aplicar la clase para el efecto de fadeIn
       historia.appendChild(lineElement);
+      lineElement.scrollIntoView({ behavior: "smooth" });
+      
     }, Personaje.timeout);
 
-    Personaje.timeout += 150; // Incrementa el contador global
+    Personaje.timeout += 2000;
   }
 
   coger(item) {

@@ -2,14 +2,17 @@ import { Escena } from "./escena.js";
 import * as cast from './cast.js';
 import * as props from './props.js'
 import { Enano } from "./enano.js";
+import { progressBar } from "./progressBar.js";
+import { Personaje } from "./personaje.js";
 
-export class Escena1 extends Escena {
+  class Escena1 extends Escena {
     constructor() {
-      super('escena 1');
+      super('Inicios', 'Bosque élfico');
     }
   
     run() {
-
+        progressBar(30000)
+        this.load()
         this.addCharacter(cast.narrador)
         this.addCharacter(cast.bilbo)
         this.addCharacter(cast.gandalf)
@@ -25,6 +28,12 @@ export class Escena1 extends Escena {
         this.personajes.get(cast.gandalf.getName()).hablar('Ya estan aqui! Bienvenidos a la casa de Bilbo')
         this.personajes.get(cast.kili.getName()).coger(this.items.get(props.lampara.getName()))
         this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
         this.personajes.get(cast.kili.getName()).hablar('Cógelo Fili')
         this.personajes.get(cast.kili.getName()).pasar(this.items.get(props.lampara.getName()),this.personajes.get(cast.fili.getName()))
         this.personajes.get(cast.dwalin.getName()).hablar(`Viva nuestro rey ${Enano.rey}`)
@@ -34,14 +43,14 @@ export class Escena1 extends Escena {
     }
   }
 
-  export class Escena2 extends Escena {
+     class Escena2 extends Escena {
     constructor() {
-      super('escena 1');
+      super('El peor día para un robo', 'Supermercados McElfo');
     }
   
     run() {
-
-        this.clear()
+        progressBar(5000)
+        this.load()
         this.addCharacter(cast.bilbo)
         this.addCharacter(cast.gandalf)
         this.addCharacter(cast.thorin)
