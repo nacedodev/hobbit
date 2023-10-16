@@ -1,4 +1,4 @@
 import { Item } from "./item.js"
 
-export let lampara = new Item('Lámpara')
-export let reloj = new Item('Reloj del abuelo')
+export let botiquin = new Item('Botiquín')
+export let traje = new Item('Traje espacial')

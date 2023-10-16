@@ -2,15 +2,15 @@ import { Item } from './item.js'
 
 export class Personaje {
   #nombre = null;
-  #raza = null;
-  #clase = null;
+  #especialidad = null;
+  #origen = null;
   #inventario = null;
   static timeout = 0; // Contador global de tiempo de espera
 
-  constructor(nombre, raza = null, clase = null) {
+  constructor(nombre, especialidad = null, origen = null) {
     this.#nombre = nombre;
-    this.#raza = raza;
-    this.#clase = clase;
+    this.#especialidad = especialidad;
+    this.#origen = origen;
     this.#inventario = new Set();
   }
 
@@ -44,7 +44,7 @@ export class Personaje {
     return this.#nombre;
   }
 
-  getInventario(item) {
+  getInventario() {
     return this.#inventario
   }
 }

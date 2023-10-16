@@ -20,4 +20,3 @@ export function progressBar(duration) {
     }, duration);
 }
 
-// Llama a la función con la duración deseada en milisegundos (por ejemplo, 5000ms = 5 segundos)

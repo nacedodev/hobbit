@@ -1,70 +1,79 @@
 import { Escena } from "./escena.js";
 import * as cast from './cast.js';
 import * as props from './props.js'
-import { Enano } from "./enano.js";
+import { IA } from "./IA.js";
 import { progressBar } from "./progressBar.js";
 import { Personaje } from "./personaje.js";
 
   class Escena1 extends Escena {
     constructor() {
-      super('Inicios', 'Bosque élfico');
+      super('Nuestra última esperanza', 'En el interior de la nave Estelarion');
     }
-  
+
     run() {
-        progressBar(30000)
         this.load()
+        progressBar(30000)
         this.addCharacter(cast.narrador)
-        this.addCharacter(cast.bilbo)
-        this.addCharacter(cast.gandalf)
-        this.addCharacter(cast.thorin)
-        this.addCharacter(cast.kili)
-        this.addCharacter(cast.fili)
-        this.addCharacter(cast.dwalin)
-        this.addItem(props.lampara)
-        this.addItem(props.reloj)
-        this.personajes.get(cast.gandalf.getName()).hablar('Buenos dias mi viejo amigo')
-        this.personajes.get(cast.bilbo.getName()).hablar('Gandalf, me alegro de verte')
-        this.personajes.get(cast.narrador.getName()).hablar(`De pronto aparecieron ${Enano.numEnanos} Enanos`)
-        this.personajes.get(cast.gandalf.getName()).hablar('Ya estan aqui! Bienvenidos a la casa de Bilbo')
-        this.personajes.get(cast.kili.getName()).coger(this.items.get(props.lampara.getName()))
-        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
-        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
-        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
-        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
-        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
-        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
-        this.personajes.get(cast.bilbo.getName()).hablar('Deja eso en su sitio!')
-        this.personajes.get(cast.kili.getName()).hablar('Cógelo Fili')
-        this.personajes.get(cast.kili.getName()).pasar(this.items.get(props.lampara.getName()),this.personajes.get(cast.fili.getName()))
-        this.personajes.get(cast.dwalin.getName()).hablar(`Viva nuestro rey ${Enano.rey}`)
-        this.personajes.get(cast.fili.getName()).hablar(Enano.alabarRey())
-        this.personajes.get(cast.fili.getName()).hablar(`Tengo la ${Array.from(cast.fili.getInventario())[0].getName()}`)
+        this.addCharacter(cast.AIDA)
+        this.addCharacter(cast.elara)
+        this.addCharacter(cast.samuel)
+        this.addCharacter(cast.maria)
+        this.addCharacter(cast.nguyen)
+        this.addCharacter(cast.alex)
+        this.addCharacter(cast.ramirez)
+        this.addItem(props.botiquin)
+        this.addItem(props.traje)
+        this.personajes.get(cast.narrador.getName()).hablar('Te encuentras en una aeronave , eres su capitán , estas en medio de una mision que decidirá el futuro de tu planeta necesitas obtener una llave que desbloquea un arma ancestral que')
+        this.personajes.get(cast.elara.getName()).hablar('Buenos dias mi viejo amigo')
+        this.personajes.get(cast.AIDA.getName()).hablar('Elara, me alegro de verte')
+        this.personajes.get(cast.narrador.getName()).hablar(`De pronto aparecieron...`)
+        this.personajes.get(cast.elara.getName()).hablar('Ya estan aqui! Bienvenidos a la casa de AIDA')
+        this.personajes.get(cast.maria.getName()).coger(this.items.get(props.botiquin.getName()))
+        this.personajes.get(cast.AIDA.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.AIDA.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.AIDA.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.AIDA.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.AIDA.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.AIDA.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.AIDA.getName()).hablar('Deja eso en su sitio!')
+        this.personajes.get(cast.maria.getName()).hablar('Cógelo nguyen')
+        this.personajes.get(cast.maria.getName()).pasar(this.items.get(props.botiquin.getName()),this.personajes.get(cast.nguyen.getName()))
+        this.personajes.get(cast.alex.getName()).hablar(`Viva nuestra suprema ${IA.entidad_central}`)
+        this.personajes.get(cast.nguyen.getName()).hablar('bla bla')
+        this.personajes.get(cast.nguyen.getName()).hablar(`Tengo el ${Array.from(cast.nguyen.getInventario())[0].getName()}`)
+        setTimeout(() => {
+            
+           let respuesta = window.prompt("a. Descender a un planeta cercano para repararla\nb. Salto intergaláctico a un planeta especializado\nc. Repararla con las herramientas disponibles");
+           (respuesta === 'a') ? escenas[2].run() 
+         : (respuesta === 'b') ? escenas[3].run() 
+         : (respuesta === 'c') ? escenas[4].run()
+         : alert("Debias escribir a / b / c")
+
+      }, Personaje.timeout + 2000) ;
         
     }
   }
-
-     class Escena2 extends Escena {
+  class Escena2 extends Escena {
     constructor() {
-      super('El peor día para un robo', 'Supermercados McElfo');
+      super('El descenso', 'planeta Tierra');
     }
   
     run() {
-        progressBar(5000)
         this.load()
-        this.addCharacter(cast.bilbo)
-        this.addCharacter(cast.gandalf)
-        this.addCharacter(cast.thorin)
+        progressBar(5000)
+        this.addCharacter(cast.AIDA)
+        this.addCharacter(cast.elara)
+        this.addCharacter(cast.samuel)
         this.addCharacter(cast.narrador)
-        this.addCharacter(cast.kili)
-        this.addCharacter(cast.fili)
-        this.addCharacter(cast.dwalin)
-        this.addItem(props.lampara)
-        this.addItem(props.reloj)
-        this.personajes.get(cast.gandalf.getName()).hablar('Que te cuentas')
-        this.personajes.get(cast.bilbo.getName()).hablar('Poca cosa')
-        this.personajes.get(cast.narrador.getName()).hablar(`De pronto aparecieron ${Enano.numEnanos} Enanos`)
-        this.personajes.get(cast.gandalf.getName()).hablar('se viene')
-
+        this.addCharacter(cast.maria)
+        this.addCharacter(cast.nguyen)
+        this.addCharacter(cast.alex)
+        this.addItem(props.botiquin)
+        this.addItem(props.traje)
+        this.personajes.get(cast.elara.getName()).hablar('Que te cuentas')
+        this.personajes.get(cast.AIDA.getName()).hablar('Poca cosa')
+        this.personajes.get(cast.narrador.getName()).hablar(`De pronto aparecieron...`)
+        this.personajes.get(cast.elara.getName()).hablar('wow')
     }
   }
 
