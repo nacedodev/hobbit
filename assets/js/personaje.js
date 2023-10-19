@@ -15,8 +15,9 @@ export class Personaje {
   }
 
   hablar(text) {
+    const palabrasEnTexto = text.split(' ').length
     setTimeout(() => {
-      let textoMejorado = `<br/><br/> <span>${this.#nombre}:</span> "${text}"`;
+      let textoMejorado = `<br/><br/> <span class ='bocado'>${this.#nombre}:</span> "${text}"`;
       const lineElement = document.createElement('p');
       lineElement.innerHTML = textoMejorado;
       lineElement.classList.add('fadein'); // Aplicar la clase para el efecto de fadeIn
@@ -25,7 +26,7 @@ export class Personaje {
       
     }, Personaje.timeout);
 
-    Personaje.timeout += 2000;
+    Personaje.timeout += palabrasEnTexto * 250;
   }
 
   coger(item) {

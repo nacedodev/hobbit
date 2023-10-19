@@ -14,4 +14,5 @@
   export const origenes = {
     terra_nova: Symbol('Terra Nova'),
     laboratorio: Symbol('Laboratorio'),
+    tierra: Symbol('Planeta Tierra')
   };
