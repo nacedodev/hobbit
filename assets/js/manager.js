@@ -22,7 +22,7 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
-        this.personajes.get(cast.narrador.getName()).narrar('La elara Elara Silva se encuentra al frente de la sala. AIDA proyecta información relevante en una pantalla holográfica en el centro de la mesa , el resto de la tripulación mira espectante.')
+        this.personajes.get(cast.narrador.getName()).narrar('La Capitana Elara Silva se encuentra al frente de la sala. AIDA proyecta información relevante en una pantalla holográfica en el centro de la mesa , el resto de la tripulación mira espectante.')
         this.personajes.get(cast.elara.getName()).hablar('Bienvenidos a bordo de la nave Estelarion. Cada uno de ustedes jugará un papel crucial en esta misión, la cual no tiene fecha de retorno, pero sí un objetivo claro: salvar a nuestro planeta natal, Terra Nova, de una glaciación inminente que solo se podrá revertir de una forma. El Dr. Samuel nos lo explicará en detalle.')
         this.personajes.get(cast.samuel.getName()).hablar('Hola a todos. Llevo años investigando esta glaciación y les contaré cuál es el objetivo de esta misión.')
         this.personajes.get(cast.AIDA.getName()).hablar('Proyectando mapa 3D de la superficie de Terra Nova...')
@@ -59,7 +59,7 @@ import { Personaje } from "./personaje.js";
          : (respuesta === 'c') ? escenas[4].run()
          : (!respuesta) ? escenas[1].run()
          : alert("Debias escribir a / b / c")
-            }while(respuesta !== 'a' && respuesta !== 'b' && respuesta !== 'c')  
+            }while(respuesta !== 'a' && respuesta !== 'b' && respuesta !== 'c' && respuesta)  
 
       },Personaje.timeout + 1500) ;
         
