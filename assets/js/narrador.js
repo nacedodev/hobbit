@@ -22,6 +22,6 @@ export class Narrador extends Personaje{
 
             }, Personaje.timeout);
         
-            Personaje.timeout += palabrasEnTexto * 270;
+            Personaje.timeout += palabrasEnTexto * 260;
           }
     }

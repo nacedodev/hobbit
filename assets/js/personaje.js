@@ -16,12 +16,13 @@ export class Personaje {
 
   hablar(text) {
     const palabrasEnTexto = text.split(' ').length
+    let $historia = document.getElementById('historia')
     setTimeout(() => {
       let textoMejorado = `<br/><br/> <span class ='bocado'>${this.#nombre}:</span> "${text}"`;
       const lineElement = document.createElement('p');
       lineElement.innerHTML = textoMejorado;
       lineElement.classList.add('fadein'); // Aplicar la clase para el efecto de fadeIn
-      historia.appendChild(lineElement);
+      $historia.appendChild(lineElement);
       lineElement.scrollIntoView({ behavior: "smooth" });
       
     }, Personaje.timeout);

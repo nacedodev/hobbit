@@ -100,3 +100,13 @@ p{
       opacity: 1;
     }
   }
+
+  @media screen and (width <= 650px) {
+    h2{
+      display:none;
+    }
+
+    div{
+      width: 85%;
+    }
+  }

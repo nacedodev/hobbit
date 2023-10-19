@@ -21,3 +21,5 @@ export let alex = new Personaje('Alex',especialidades.astronomo,origenes.terra_n
 export let ramirez = new Personaje('Sargento Ramirez',especialidades.comandante,origenes.terra_nova)
 
 export let michael = new Personaje('Michael Grey',especialidades.ingeniero,origenes.tierra)
+
+export let sabio = new Personaje('Sabio',especialidades.sabio,origenes.nexus)
