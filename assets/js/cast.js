@@ -1,3 +1,4 @@
+import { Alex } from "./Alex.js"
 import { IA } from "./IA.js"
 import {especialidades , origenes} from "./especialidad_origen.js"
 import { Narrador } from "./narrador.js"
@@ -16,7 +17,7 @@ export let maria = new Personaje('Maria Riordan',especialidades.militar,origenes
 
 export let nguyen = new Personaje('Nguyen',especialidades.mecanico,origenes.terra_nova)
 
-export let alex = new Personaje('Alex',especialidades.astronomo,origenes.terra_nova)
+export let alex = new Alex('Alex',especialidades.astronomo,origenes.terra_nova)
 
 export let ramirez = new Personaje('Sargento Ramirez',especialidades.comandante,origenes.terra_nova)
 

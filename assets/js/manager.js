@@ -22,6 +22,7 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.addItem(props.key)
         this.personajes.get(cast.narrador.getName()).narrar('La Capitana Elara Silva se encuentra al frente de la sala. AIDA proyecta información relevante en una pantalla holográfica en el centro de la mesa , el resto de la tripulación mira espectante.')
         this.personajes.get(cast.elara.getName()).hablar('Bienvenidos a bordo de la nave Estelarion. Cada uno de ustedes jugará un papel crucial en esta misión, la cual no tiene fecha de retorno, pero sí un objetivo claro: salvar a nuestro planeta natal, Terra Nova, de una glaciación inminente que solo se podrá revertir de una forma. El Dr. Samuel nos lo explicará en detalle.')
         this.personajes.get(cast.samuel.getName()).hablar('Hola a todos. Llevo años investigando esta glaciación y les contaré cuál es el objetivo de esta misión.')
@@ -455,6 +456,8 @@ import { Personaje } from "./personaje.js";
         this.personajes.get(cast.nguyen.getName()).hablar("¡Lo tengo! Los símbolos forman un patrón que coincide con las constelaciones de nuestra galaxia. Sigamos el patrón estelar.");
         this.personajes.get(cast.elara.getName()).hablar("Excelente observación, Técnico Nguyen. Sigamos el patrón y veamos a dónde nos lleva.");
         this.personajes.get(cast.narrador.getName()).narrar("La tripulación sigue el patrón de los símbolos y avanza más profundamente en la cueva. A medida que se acercan al centro, encuentran un pedestal en el que descansa la tan buscada llave.");
+        this.personajes.get(cast.alex.getName()).coger(props.key)
+        this.personajes.get(cast.alex.getName()).hasKey()
         this.personajes.get(cast.elara.getName()).hablar("¡Lo hemos logrado! La llave está en nuestras manos. Terra Nova tiene una oportunidad de sobrevivir gracias a ustedes.");
         this.personajes.get(cast.alex.getName()).hablar("Ha sido un largo viaje, superamos desafíos increíbles pero finalmente tenemos la llave en nuestro poder.");
         this.personajes.get(cast.ramirez.getName()).hablar("Ahora, debemos regresar a la nave y enfrentar cualquier amenaza que se interponga en nuestro camino.");
@@ -522,6 +525,8 @@ import { Personaje } from "./personaje.js";
         this.personajes.get(cast.samuel.getName()).hablar('¿Un acertijo? ¿Qué dice el mapa?');
         this.personajes.get(cast.ramirez.getName()).hablar('No tenemos tiempo que perder. Muéstranos el acertijo, Alex.');
         this.personajes.get(cast.alex.getName()).hablar('Muy bien, aquí está. Dice: "A lo largo del tiempo y el espacio, dentro de la esencia de una estrella, encontrarás la llave que desvela el destino. Pero ten cuidado, pues la codicia puede llevar a la destrucción."');
+        this.personajes.get(cast.alex.getName()).coger(props.key)
+        this.personajes.get(cast.alex.getName()).hasKey()
         this.personajes.get(cast.elara.getName()).hablar('Lo tengo! , la llave siempre ha estado con nosotros , en el corazón de nuestra nave');
         this.personajes.get(cast.narrador.getName()).narrar('La tripulación corre hacia la nave , y efectivamente en lo mas profundo de la nave , algo brillaba sin parar , por fin encontraron la llave');
         this.personajes.get(cast.elara.getName()).hablar('Por fin salvaremos Terra Nova , volvamos a casa! , Alex que te sucede ? te noto algo extraño');
@@ -785,6 +790,8 @@ import { Personaje } from "./personaje.js";
         this.personajes.get(cast.samuel.getName()).hablar("Es fascinante. Nguyen siempre decía que el universo es un rompecabezas gigante esperando a ser resuelto.");
         this.personajes.get(cast.alex.getName()).hablar("Oigan, siento una especie de conexión con el acertijo, como si Nguyen nos guiara. Debemos resolverlo.");
         this.personajes.get(cast.narrador.getName()).narrar("La tripulación trabaja juntos para descifrar el acertijo, usando su ingenio y conocimientos combinados. Finalmente, la respuesta se vuelve clara y revela la ubicación de la llave.");
+        this.personajes.get(cast.alex.getName()).coger(props.key)
+        this.personajes.get(cast.alex.getName()).hasKey()
         this.personajes.get(cast.maria.getName()).hablar("¡Lo hicimos! ¡Hemos encontrado la llave que salvará a Terra Nova!");
         this.personajes.get(cast.elara.getName()).hablar("Nguyen estaría orgulloso de nosotros. Ahora, asegurémonos de que esta llave llegue a su destino.");
         this.personajes.get(cast.narrador.getName()).narrar("Justo cuando parece que finalmente han triunfado, el Sargento Ramirez da un paso adelante, con avaricia en los ojos, y toma la llave.");
