@@ -437,6 +437,7 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.addItem(props.key)
         this.personajes.get(cast.maria.getName()).hablar("No puedo creer que hayamos dejado al doctor atrás, después de lo mucho que nos ayudó. ¡Pudimos haber hecho algo para salvarlo!");
         this.personajes.get(cast.nguyen.getName()).hablar("¿Qué se suponía que hiciéramos Maria? ¿Arriesgarnos a que nos secuestren y maten a todos?");
         this.personajes.get(cast.alex.getName()).hablar("Lo siento teniente pero el técnico Nguyen tiene razón, no teníamos elección, era él o el planeta.");
@@ -519,6 +520,7 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.addItem(props.key)
         this.personajes.get(cast.narrador.getName()).narrar('La tripulación, con un sentimiento agridulce por dejar atrás a la Teniente María, regresa a la nave y se prepara para emprender su viaje siguiendo el mapa proporcionado por el Especialista Sabio de Nexus Heaven. Durante el viaje, el ambiente en la nave es tenso, y todos están conscientes de la difícil decisión que les espera al llegar a su destino.');
         this.personajes.get(cast.AIDA.getName()).hablar('Estamos a punto de llegar a la ubicación indicada en el mapa. Por favor, prepárense para cualquier desafío que podamos encontrar.');
         this.personajes.get(cast.alex.getName()).hablar('Está bien, todos. Hemos llegado. Según el mapa del anciano, la llave debe estar cerca. Pero, para obtenerla, debemos resolver un acertijo.');
@@ -785,6 +787,7 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.alex)
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
+        this.addItem(props.key)
         this.personajes.get(cast.elara.getName()).hablar("Es extraño, ¿no creen? Un planeta sin signos de vida, pero con un acertijo en esta cueva. ¿Qué podría significar?");
         this.personajes.get(cast.maria.getName()).hablar("Podría ser una prueba. Como si estuviera destinada a ser descubierta por alguien.");
         this.personajes.get(cast.samuel.getName()).hablar("Es fascinante. Nguyen siempre decía que el universo es un rompecabezas gigante esperando a ser resuelto.");
