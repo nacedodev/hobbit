@@ -28,6 +28,19 @@ export class Escena {
     historiaElement.appendChild(tituloElement);
     historiaElement.appendChild(lugarElement);
   }
+
+  gameOver(){
+    let $over = document.getElementById('over')
+    $over.style.display = 'block'
+    $over.scrollIntoView({ behavior: "smooth" });
+  }
+
+  theEnd(){
+    let $end = document.getElementById('end')
+    $end.classList.add('fadein');
+    $end.style.display = 'block'
+    $end.scrollIntoView({ behavior: "smooth" });
+  }
   
   addCharacter(personaje) {
     this.personajes.set(personaje.getName(), personaje)

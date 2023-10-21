@@ -70,7 +70,6 @@ p{
 }
 
 
-/* style.css */
 .progress-bar {
   z-index: 99;
   width: 0;
@@ -106,6 +105,27 @@ p{
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.214), 0 0 10px gold;
 }
 
+#over {
+  display: none;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+#end{
+  display: none;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  margin-top: 20px;
+}
+
+#end > img{
+  margin:0 auto;
+  width: 200px;
+}
 
 /* Definir una animación personalizada para la barra de progreso */
 @keyframes fillProgressBar {

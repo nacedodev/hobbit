@@ -243,12 +243,15 @@ import { Personaje } from "./personaje.js";
         this.personajes.get(cast.narrador.getName()).narrar('Con esas palabras, Nguyen se despide de la tripulación y regresa a la nave. Tras un breve silencio, la tristeza llena la sala de control mientras todos rinden homenaje al valiente técnico que dio su vida para salvar a la tripulación. Ahora, Alex debe tomar una decisión crucial sobre el futuro de su aventura en el espacio, mientras la nave sigue su viaje a través de las estrellas')
         progressBar(Personaje.timeout + 1000)
         setTimeout(() => {
-            
-           let respuesta = window.prompt("a. Rendir homenaje a Nguyen y reponerse\nb. Continuar la aventura");
-           (respuesta === 'a') ? escenas[15].run()
-         : (respuesta === 'b') ? escenas[14].run() 
-         : (!respuesta) ? escenas[1].run()
-         : alert("Debias escribir a / b ")
+          let respuesta
+
+          do{
+            respuesta = window.prompt("a. Rendir homenaje a Nguyen y reponerse\nb. Continuar la aventura");
+            (respuesta === 'a') ? escenas[15].run()
+          : (respuesta === 'b') ? escenas[14].run() 
+          : (!respuesta) ? escenas[1].run()
+          : alert("Debias escribir a / b ")
+          }while(respuesta !== 'a' && respuesta !== 'b' && respuesta !== 'c' && respuesta)
       }, Personaje.timeout + 1500) ;
         
     }
@@ -301,13 +304,15 @@ import { Personaje } from "./personaje.js";
         
         progressBar(Personaje.timeout + 1000)
         setTimeout(() => {
-            
-           let respuesta = window.prompt("a. Partir hacia los Confines del Universo\nb. Viajar en el tiempo hasta el inicio");
-           (respuesta === 'a') ? escenas[6].run() 
-         : (respuesta === 'b') ? escenas[1].run() 
-         : alert("Debias escribir a / b ")
+            let respuesta
+            do{
+              respuesta = window.prompt("a. Partir hacia los Confines del Universo\nb. Viajar en el tiempo hasta el inicio");
+              (respuesta === 'a') ? escenas[6].run() 
+            : (respuesta === 'b') ? escenas[1].run() 
+            : alert("Debias escribir a / b ")
+            } while(respuesta !== 'a' && respuesta !== 'b' && respuesta !== 'c' && respuesta)
 
-      }, Personaje.timeout + 1000) ;
+      }, Personaje.timeout + 1000) 
         
     }
   }
@@ -371,7 +376,7 @@ import { Personaje } from "./personaje.js";
         
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
-         alert("GAME OVER")
+         this.gameOver()
 
       }, Personaje.timeout + 1500) ;
         
@@ -408,12 +413,15 @@ import { Personaje } from "./personaje.js";
 
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
-            
-           let respuesta = window.prompt("a. Huir e ir a buscar la llave\nb. Luchar por el Doctor");
-           (respuesta === 'a') ? escenas[8].run() 
-         : (respuesta === 'b') ? escenas[9].run() 
-         : (!respuesta) ? escenas[1].run()
-         : alert("Debias escribir a / b ")
+          let respuesta
+          do{
+            respuesta = window.prompt("a. Huir e ir a buscar la llave\nb. Luchar por el Doctor");
+            (respuesta === 'a') ? escenas[8].run() 
+          : (respuesta === 'b') ? escenas[9].run() 
+          : (!respuesta) ? escenas[1].run()
+          : alert("Debias escribir a / b ")
+
+          } while(respuesta !== 'a' && respuesta !== 'b' && respuesta !== 'c' && respuesta)
 
       }, Personaje.timeout + 1500) ;
         
@@ -474,7 +482,7 @@ import { Personaje } from "./personaje.js";
 
   class Escena9 extends Escena {
     constructor() {
-      super('Nuestra última esperanza', 'En el interior de la nave Estelarion');
+      super('Un disparo en el tiempo', 'Frontera interestelar');
     }
 
     run() {
@@ -489,15 +497,24 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.personajes.get(cast.narrador.getName()).narrar('La valiente capitana Elara Silva lideraba a su equipo con determinación mientras los piratas espaciales se acercaban amenazadoramente.');
+        this.personajes.get(cast.elara.getName()).hablar('¡Mantengan la formación! No permitiremos que los piratas nos arrebaten a Samuel. AIDA, necesitamos estrategias defensivas.');
+        this.personajes.get(cast.AIDA.getName()).hablar('Entendido, capitana. Estableciendo campos de energía defensivos y desplegando drones de combate.');
+        this.personajes.get(cast.samuel.getName()).hablar('Capitana, estos piratas parecen tener tecnología alienígena avanzada. Esto podría ser clave para nuestra supervivencia.');
+        this.personajes.get(cast.maria.getName()).hablar('¡No hay tiempo para investigaciones, Dr. Voss! Estamos en plena batalla. Debemos mantenernos enfocados en la defensa.');
+        this.personajes.get(cast.nguyen.getName()).hablar('¡Capitana, estamos perdiendo energía! Estoy haciendo lo que puedo, pero necesitamos un respiro.');
+        this.personajes.get(cast.alex.getName()).hablar('¡Capitana, tenemos que encontrar una salida de esta situación! ¿Hay alguna ruta de escape?');
+        this.personajes.get(cast.elara.getName()).hablar('AIDA, ¿hay algún punto de fuga seguro?');
+        this.personajes.get(cast.AIDA.getName()).hablar('Analizando... ¡Sí, capitana! Hay un agujero de gusano cercano que podría permitirnos escapar de esta confrontación.');
+        this.personajes.get(cast.ramirez.getName()).hablar('¡Mantengan la formación! Protegeremos la retaguardia mientras la Estelarion se retira.');
+        this.personajes.get(cast.narrador.getName()).narrar('Mientras la nave se dirigía hacia el agujero de gusano, los piratas lanzaron un ataque desesperado. En medio de la confusión y el caos, una de las naves enemigas disparó un arma desconocida: una pistola de portales que impactó directamente en Alex.');
+        this.personajes.get(cast.alex.getName()).hablar('¡Ah! ¡Me están...!');
+        this.personajes.get(cast.elara.getName()).hablar('¡Alex! ¡No, no podemos perderlo!');
+        this.personajes.get(cast.narrador.getName()).narrar('La tripulación de la Estelarion, devastada por la pérdida de su querido amigo y miembro valioso del equipo avaba reducida a cenizas por los piratas espaciales, mientras tanto Alex viaja a través del espacio y del tiempo a otra línea temporal');
+
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
-            
-           let respuesta = window.prompt("a. Descender a un planeta cercano para repararla\nb. Salto intergaláctico a un planeta especializado\nc. Repararla con las herramientas disponibles");
-           (respuesta === 'a') ? escenas[2].run() 
-         : (respuesta === 'b') ? escenas[3].run() 
-         : (respuesta === 'c') ? escenas[4].run()
-         : alert("Debias escribir a / b / c")
-
+          escenas[15].run()
       }, Personaje.timeout + 1500) ;
         
     }
@@ -535,12 +552,14 @@ import { Personaje } from "./personaje.js";
 
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
-            
-           let respuesta = window.prompt("a. Vender la llave\nb. Volver a Terra Nova");
-           (respuesta === 'a') ? escenas[11].run() 
-         : (respuesta === 'b') ? escenas[18].run() 
-         : (!respuesta) ? escenas[1].run()
-         : alert("Debias escribir a / b / c")
+          let respuesta 
+          do{
+            respuesta = window.prompt("a. Vender la llave\nb. Volver a Terra Nova");
+            (respuesta === 'a') ? escenas[11].run() 
+          : (respuesta === 'b') ? escenas[18].run() 
+          : (!respuesta) ? escenas[1].run()
+          : alert("Debias escribir a / b / c")
+          } while(respuesta !== 'a' && respuesta !== 'b' && respuesta !== 'c' && respuesta)
 
       }, Personaje.timeout + 1500) ;
         
@@ -587,8 +606,7 @@ import { Personaje } from "./personaje.js";
 
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
-         alert("GAME OVER")
-
+         this.gameOver()
       }, Personaje.timeout + 1500) ;
         
     }
@@ -596,7 +614,7 @@ import { Personaje } from "./personaje.js";
 
   class Escena12 extends Escena {
     constructor() {
-      super('Nuestra última esperanza', 'En el interior de la nave Estelarion');
+      super('Un encuentro inesperado', 'Por las calles de Nexus Heaven');
     }
 
     run() {
@@ -609,16 +627,40 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.nguyen)
         this.addCharacter(cast.alex)
         this.addCharacter(cast.ramirez)
+        this.addCharacter(cast.paisano)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.personajes.get(cast.alex.getName()).hablar("Es demasiado arriesgado cruzar ese portal. No lo cruzaremos.");
+        this.personajes.get(cast.samuel.getName()).hablar("Es una decisión sensata. Tenemos que mantenernos enfocados en nuestro objetivo, no importa cuán tentadoras sean las distracciones.");
+        this.personajes.get(cast.ramirez.getName()).hablar("De acuerdo, exploremos el planeta en busca de pistas.");
+        this.personajes.get(cast.narrador.getName()).narrar("La tripulación continúa su exploración de Nexus Heaven, sin sospechar que podrían haber perdido una oportunidad única. Mientras avanzan por la ciudad conocen a un paisano local que les ofreció su ayuda. Llegan a un callejón sin salida donde un dragón los embosca.");
+        this.personajes.get(cast.alex.getName()).hablar("¡Cuidado, un dragón! Todos, a la defensiva.");
+        this.personajes.get(cast.elara.getName()).hablar("¡No podemos permitir que este dragón nos detenga!");
+        this.personajes.get(cast.nguyen.getName()).hablar("Creo que mejor nos vamos por otro camino.");
+        this.personajes.get(cast.ramirez.getName()).hablar("No hay otro camino Nguyen, y no vamos a retroceder. Debemos enfrentar a esta bestia.");
+        this.personajes.get(cast.maria.getName()).hablar("Alex, ¿tienes alguna idea de cómo derrotarlo?");
+        this.personajes.get(cast.alex.getName()).hablar("Debemos buscar una debilidad. Dr. Voss, observe su anatomía. Paisano, prepárate para tomar medidas tácticas.");
+        this.personajes.get(cast.paisano.getName()).hablar("Entendido.");
+        this.personajes.get(cast.narrador.getName()).narrar("Todos se mueven con precisión, observando al dragón mientras buscan un punto débil en su blindaje escamoso. Pero el tiempo apremia, ya que el dragón se acerca y lanza una llamarada ardiente hacia ellos.");
+        this.personajes.get(cast.elara.getName()).hablar("¡Retrocedan! ¡Busquemos un refugio momentáneo!");
+        this.personajes.get(cast.narrador.getName()).narrar("El equipo se refugia en un callejón lateral mientras las llamas del dragón arden en el suelo. La tensión se siente en el aire mientras buscan desesperadamente una solución.");
+        this.personajes.get(cast.alex.getName()).hablar("¡Hay que atacar mientras recarga su aliento de fuego! Paisano, prepárate para disparar. Samuel, encuentra una manera de distraerlo.");
+        this.personajes.get(cast.samuel.getName()).hablar("[Agarra un pedazo de metal y lo arroja hacia un lado, distrayendo al dragón] ¡Hey, monstruo escamoso, aquí estoy!");
+        this.personajes.get(cast.paisano.getName()).hablar("Tiene un punto débil en el cuello, justo detrás de la cabeza. Esperen a que respire de nuevo.");
+        this.personajes.get(cast.narrador.getName()).narrar("El dragón, momentáneamente distraído por el ruido del Dr. Voss, vuelve a cargar su aliento de fuego. Cuando abre la boca para lanzar su llamarada, la tripulación actúa con precisión.");
+        this.personajes.get(cast.alex.getName()).hablar("¡AHORA!");
+        this.personajes.get(cast.narrador.getName()).narrar("Un proyectil disparado por el paisano local alcanza el punto débil del dragón, y el monstruo emite un rugido agonizante mientras su aliento de fuego se apaga prematuramente.");
+        this.personajes.get(cast.maria.getName()).hablar("¡Lo hicimos! Está herido. Aprovechemos la oportunidad.");
+        this.personajes.get(cast.narrador.getName()).narrar("Todos se lanzan hacia el dragón herido, trabajando juntos para derrotarlo. Finalmente, el dragón cae derrotado, y en su interior encuentran lo que han estado buscando: la llave que podría salvar a Terra Nova.");
+        this.personajes.get(cast.alex.getName()).coger(props.key)
+        this.personajes.get(cast.alex.getName()).hasKey()
+        this.personajes.get(cast.ramirez.getName()).hablar("¡Lo hemos logrado! Ahora, solo nos queda regresar a la Estelarion y usar esta llave para salvar Terra Nova.");
+        this.personajes.get(cast.narrador.getName()).narrar("El equipo toma un momento para recuperarse y procesar la victoria para luego prepararse para regresar a su nave, con la llave en su poder y la esperanza de un futuro mejor para su planeta natal.");
+
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
             
-           let respuesta = window.prompt("a. Descender a un planeta cercano para repararla\nb. Salto intergaláctico a un planeta especializado\nc. Repararla con las herramientas disponibles");
-           (respuesta === 'a') ? escenas[2].run() 
-         : (respuesta === 'b') ? escenas[3].run() 
-         : (respuesta === 'c') ? escenas[4].run()
-         : alert("Debias escribir a / b / c")
+           escenas[18].run()
 
       }, Personaje.timeout + 1500) ;
         
@@ -627,7 +669,7 @@ import { Personaje } from "./personaje.js";
 
   class Escena13 extends Escena {
     constructor() {
-      super('Nuestra última esperanza', 'En el interior de la nave Estelarion');
+      super('La puerta', 'Zona desconocida de Nexus Heaven');
     }
 
     run() {
@@ -642,14 +684,27 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.personajes.get(cast.alex.getName()).hablar("No podemos dividirnos. María, tu lugar está con nosotros en la Estelarion. Seguiremos juntos en esta aventura.");
+        this.personajes.get(cast.elara.getName()).hablar("Pero Alex, esto podría beneficiarnos mucho.");
+        this.personajes.get(cast.nguyen.getName()).hablar("Es cierto, no podemos dejar pasar esta oportunidad.");
+        this.personajes.get(cast.maria.getName()).hablar("No te preocupes por mí, el planeta necesita esto. Yo estaré bien.");
+        this.personajes.get(cast.alex.getName()).hablar("Ya tomé mi decisión, tienes que quedarte con nosotros. Lo siento señor, pero ella permanecerá en la nave.");
+        this.personajes.get(cast.narrador.getName()).narrar("El sabio asiente en señal de comprensión, pero con un toque de desilusión en sus ojos. La tripulación sigue explorando Nexus Heaven en busca de pistas sobre la llave. Mientras exploran, encuentran un misterioso portal y se enfrentan a una decisión crucial: si cruzarlo o no. Lo que no saben es que este portal podría llevarlos atrás en el tiempo.");
+        this.personajes.get(cast.elara.getName()).hablar("Miren eso, un portal.");
+        this.personajes.get(cast.maria.getName()).hablar("¿Deberíamos cruzarlo?");
+        this.personajes.get(cast.alex.getName()).hablar("No lo sé, no sabemos a dónde nos llevará.");
+        this.personajes.get(cast.samuel.getName()).hablar("Los portales son una rareza, y podríamos obtener información invaluable. Pero también es arriesgado.");
+        this.personajes.get(cast.elara.getName()).hablar("¿Qué sería la vida sin un poco de riesgo?");
+        this.personajes.get(cast.maria.getName()).hablar("Nguyen, ¿qué opinas?");
+        this.personajes.get(cast.nguyen.getName()).hablar("Es una decisión importante. Podríamos encontrar pistas sobre la llave, pero como dijo Samuel, no sabemos las consecuencias del viaje en el tiempo.");
+        this.personajes.get(cast.narrador.getName()).narrar("La cueva se llena de un silencio cargado de posibilidades, mientras la tripulación contempla el misterioso portal y considera las opciones ante ellos. El destino de su expedición pende en la balanza, y cada palabra y gesto cuentan en esta toma de decisiones crítica.");
+
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
             
-           let respuesta = window.prompt("a. Descender a un planeta cercano para repararla\nb. Salto intergaláctico a un planeta especializado\nc. Repararla con las herramientas disponibles");
-           (respuesta === 'a') ? escenas[2].run() 
-         : (respuesta === 'b') ? escenas[3].run() 
-         : (respuesta === 'c') ? escenas[4].run()
-         : alert("Debias escribir a / b / c")
+           let respuesta = window.confirm("Cruzar el portal?");
+           (respuesta) ? escenas[3].run() 
+         : escenas[12].run() 
 
       }, Personaje.timeout + 1500) ;
         
@@ -690,7 +745,7 @@ import { Personaje } from "./personaje.js";
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
          
-          alert("GAME OVER")
+          this.gameOver()
 
       }, Personaje.timeout + 1500) ;
         
@@ -719,14 +774,14 @@ import { Personaje } from "./personaje.js";
         this.personajes.get(cast.maria.getName()).hablar('Una vez más, hemos perdido a uno de los nuestros. Debemos recordar su valentía y determinación.');
         this.personajes.get(cast.ramirez.getName()).hablar('Era un verdadero héroe. Honremos su memoria.');
         this.personajes.get(cast.narrador.getName()).narrar('Al terminar el emotivo entierro, una luz comienza a brillar en la oscuridad del espacio, a lo lejos. Esta misteriosa luz crece con cada segundo que pasa, atrayendo la atención de la tripulación. La curiosidad se apodera de ellos mientras se preguntan qué podría ser.');
-        this.personajes.get(cast.alex.getName()).hablar('¿Qué es eso? ¿Deberíamos explorarlo?');
+        this.personajes.get(cast.alex.getName).hablar('Acabo de sentir algo muy extraño recorriendo mi cuerpo , espero que sean imaginaciones mías...')
+        this.personajes.get(cast.alex.getName()).hablar('Por cierto, ¿Qué es eso? ¿Deberíamos explorarlo?');
         this.personajes.get(cast.samuel.getName()).hablar('Nunca he visto algo así en el espacio. Es fascinante y desconcertante al mismo tiempo.');
         this.personajes.get(cast.maria.getName()).hablar('Podría ser algo valioso o peligroso. Deberíamos investigar.');
         this.personajes.get(cast.elara.getName()).hablar('AIDA, ¿puedes detectar alguna información adicional sobre esa luz? ¿Es algún tipo de señal o nave?');
         this.personajes.get(cast.AIDA.getName()).hablar('Estoy escaneando la zona, Capitana. No parece una señal de radio ni una nave convencional. Es un fenómeno inusual.');
         this.personajes.get(cast.ramirez.getName()).hablar('¿Y si es una trampa? No podemos permitirnos más problemas.');
         this.personajes.get(cast.alex.getName()).hablar('Es cierto, debemos ser cautelosos. Pero también somos exploradores. ¿Qué opinan, equipo? ¿Deberíamos investigar?');
-
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
             
@@ -741,7 +796,7 @@ import { Personaje } from "./personaje.js";
 
   class Escena16 extends Escena {
     constructor() {
-      super('Nuestra última esperanza', 'En el interior de la nave Estelarion');
+      super('Una señal', 'Sala de reuniones');
     }
 
     run() {
@@ -756,21 +811,25 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.personajes.get(cast.narrador.getName()).narrar('Alex: [Mirando el brillo en la distancia] ¿Qué es eso? Parece una señal, pero no podemos desviarnos de nuestro objetivo principal.');
+        this.personajes.get(cast.elara.getName()).hablar('Dr. Samuel Voss: Tienes razón, Alex. No podemos permitirnos distraernos ahora. Debemos mantenernos enfocados en encontrar la llave para salvar a Terra Nova.');
+        this.personajes.get(cast.ramirez.getName()).hablar('Sargento Ramirez: Estoy de acuerdo. No sabemos qué peligros podrían acecharnos si nos desviamos de nuestro camino. Sigamos adelante.');
+        this.personajes.get(cast.elara.getName()).hablar('Capitana Elara Silva: Confío en su juicio, equipo. Sigamos avanzando y busquemos pistas que nos lleven a la llave.');
+        this.personajes.get(cast.narrador.getName()).narrar('La tripulación continúa su camino, ignorando el misterioso brillo a lo lejos. Sin embargo, desconocen que ese brillo era Nguyen, tratando de guiarlos y evitar su trágico destino. Lamentablemente, una nave que participó en el funeral de Nguyen tiene como objetivo neutralizar al equipo. Después de un intento de huida desesperado, la nave enemiga logra alcanzarlos.');
+        this.personajes.get(cast.elara.getName()).hablar('Capitana Elara Silva: ¡No! ¡No podemos permitir que nos capturen!');
+        this.personajes.get(cast.maria.getName()).hablar('Teniente Maria Riordan: ¡Luchemos hasta el final! No dejaremos que nos derroten.');
+        this.personajes.get(cast.alex.getName()).hablar('Alex: [Herido y exhausto] No... puedo... creerlo...');
+        this.personajes.get(cast.narrador.getName()).narrar('Con gran pesar, todos los miembros del equipo mueren debido a una fuga en la nave que no pudo ser reparada. Justo antes de que Alex muera, una especie superior, con la habilidad de viajar en el tiempo, se le aparece y le propone un trato.');
+        this.personajes.get(cast.samuel.getName()).hablar('Ser Superior: Alex, tienes una elección. Puedes morir y poner fin a este juego, o puedes viajar al pasado y revertir esta situación. A cambio, debes asegurarte de que la civilización de Terra Nova prospere y sobreviva.');
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
-            do{
-           let respuesta = window.prompt("a. Descender a un planeta cercano para repararla\nb. Salto intergaláctico a un planeta especializado\nc. Repararla con las herramientas disponibles");
-           (respuesta === 'a') ? escenas[2].run() 
-           : (respuesta === 'b') ? escenas[3].run() 
-           : (respuesta === 'c') ? escenas[4].run()
-           : alert("Debias escribir a / b / c")
-          }while(respuesta !== 'a')
-
+           let respuesta = window.confirm("viajar al pasado?");
+           (respuesta) ? escenas[15].run
+           : this.gameOver()
       }, Personaje.timeout + 1500) ;
-        
     }
   }
-
+  
   class Escena17 extends Escena {
     constructor() {
       super('Un golpe inerperado', 'Planeta Celeris');
@@ -815,7 +874,7 @@ import { Personaje } from "./personaje.js";
             
            let respuesta = window.confirm("Matar al Sargento y coger la llave?");
            (respuesta) ? escenas[18].run() 
-         : alert("GAME OVER")
+         : this.gameOver()
 
       }, Personaje.timeout + 1500) ;
         
@@ -824,7 +883,7 @@ import { Personaje } from "./personaje.js";
 
   class Escena18 extends Escena {
     constructor() {
-      super('Nuestra última esperanza', 'En el interior de la nave Estelarion');
+      super('Un cálido final', 'Terra Nova');
     }
 
     run() {
@@ -839,14 +898,30 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.personajes.get(cast.elara.getName()).hablar("Miren a nuestro alrededor, equipo. Estamos en el corazón de Terra Nova, en la cueva ancestral. Hemos viajado a través de la galaxia y superado obstáculos inimaginables para llegar hasta aquí.");
+        this.personajes.get(cast.samuel.getName()).hablar("Es un momento histórico. Lo que encontraremos en esta cueva cambiará el destino de nuestro planeta y de todos los que lo llaman hogar.");
+        this.personajes.get(cast.maria.getName()).hablar("Sabemos que el artefacto que buscamos está cerca. Debemos seguir avanzando y ser conscientes de que estamos a punto de lograr algo increíble.");
+        this.personajes.get(cast.alex.getName()).hablar("Tenemos la llave maestra que abrirá el camino. A medida que avanzamos, recordemos todo lo que hemos sacrificado para llegar hasta aquí.");
+        this.personajes.get(cast.narrador.getName()).narrar("El equipo continúa avanzando por la cueva, cada paso los acerca más a su objetivo. Las paredes de la cueva parecen brillar con una luz suave, como si estuvieran siendo guiados hacia el artefacto ancestral.");
+        this.personajes.get(cast.elara.getName()).hablar("Pienso en todas las conversaciones y decisiones que hemos tomado en este viaje. Cada elección nos ha llevado hasta este momento.");
+        this.personajes.get(cast.samuel.getName()).hablar("El conocimiento que obtendremos de este artefacto no sólo revertirá la glaciación, sino que también revelará los misterios de nuestra historia.");
+        this.personajes.get(cast.maria.getName()).hablar("Somos parte de algo más grande que nosotros mismos. Estamos forjando el futuro de Terra Nova.");
+        this.personajes.get(cast.alex.getName()).hablar("Este es el culmen de nuestra aventura. Pero no olvidemos que lo que hagamos a continuación impactará a toda una civilización.");
+        this.personajes.get(cast.narrador.getName()).narrar("Al llegar al corazón de la cueva, encuentran el artefacto ancestral brillando intensamente. La belleza y la importancia del descubrimiento llenan el aire de emoción.");
+        this.personajes.get(cast.elara.getName()).hablar("No puedo creer que estamos aquí. Esto es un regalo para toda la humanidad. Creo que voy a llorar.");
+        this.personajes.get(cast.maria.getName()).hablar("Todo esto fue posible gracias a nuestra unidad y determinación. Juntos, hemos logrado lo imposible.");
+        this.personajes.get(cast.alex.getName()).hablar("Inserta la llave en el artefacto. La llave encaja perfectamente. Estamos listos para activar el artefacto.");
+        this.personajes.get(cast.narrador.getName()).narrar("El artefacto comienza a brillar aún más intensamente, y su energía fluye por toda la cueva. Los efectos de la glaciación comienzan a revertirse mientras el planeta recupera su vitalidad. Afuera, la gente de Terra Nova celebra el renacimiento de su hogar.");
+        this.personajes.get(cast.elara.getName()).hablar("¡Miren! Nuestro mundo se recupera.");
+        this.personajes.get(cast.samuel.getName()).hablar("La naturaleza está floreciendo una vez más. Hemos logrado lo que vinimos a hacer.");
+        this.personajes.get(cast.maria.getName()).hablar("La esperanza ha regresado a Terra Nova. Esto es un regalo para todas las generaciones futuras.");
+        this.personajes.get(cast.alex.getName()).hablar("Hemos cumplido nuestra misión compañeros. Hemos salvado a Terra Nova y a su gente. Esto es un testimonio de lo que podemos lograr cuando trabajamos juntos. Muchísimas gracias por esta aventura.");
+        this.personajes.get(cast.narrador.getName()).narrar("La tripulación observa con emoción mientras el planeta renace. La esperanza y el futuro brillan intensamente en el horizonte de Terra Nova, y su historia ha tomado un nuevo rumbo.");
+
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
-            
-           let respuesta = window.prompt("a. Descender a un planeta cercano para repararla\nb. Salto intergaláctico a un planeta especializado\nc. Repararla con las herramientas disponibles");
-           (respuesta === 'a') ? escenas[2].run() 
-         : (respuesta === 'b') ? escenas[3].run() 
-         : (respuesta === 'c') ? escenas[4].run()
-         : alert("Debias escribir a / b / c")
+         
+         this.theEnd()
 
       }, Personaje.timeout + 1500) ;
         
