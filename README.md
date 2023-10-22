@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="preview.png" alt="Aventura de Texto Interactiva">
+  <img src="assets/img/preview.png" alt="Aventura de Texto Interactiva">
 </p>
 
 
