@@ -26,6 +26,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.narrador.getName()).narrar('La Capitana Elara Silva se encuentra al frente de la sala. AIDA proyecta información relevante en una pantalla holográfica en el centro de la mesa , el resto de la tripulación mira espectante, antes de comenzar , una breve descripción de la nave Estelarion: ')
         props.estelarion.getInfo()
         this.personajes.get(cast.elara.getName()).hablar('Bienvenidos a bordo de la nave Estelarion. Cada uno de ustedes jugará un papel crucial en esta misión, la cual no tiene fecha de retorno, pero sí un objetivo claro: salvar a nuestro planeta natal, Terra Nova, de una glaciación inminente que solo se podrá revertir de una forma. El Dr. Samuel nos lo explicará en detalle.')
+        this.personajes.get(cast.narrador.getName()).narrar(`Antes una breve descripcion del planeta natal de los protagonistas: ${props.terra.getName()} es un planeta de ${props.terra.getHabitantes()} habitantes . ${props.terra.getClima()}.`)
         this.personajes.get(cast.samuel.getName()).hablar('Hola a todos. Llevo años investigando esta glaciación y les contaré cuál es el objetivo de esta misión.')
         this.personajes.get(cast.AIDA.getName()).hablar('Proyectando mapa 3D de la superficie de Terra Nova...')
         this.personajes.get(cast.maria.getName()).hablar('Wow, no sabía que nuestra nave contaba con este tipo de tecnología. Nada que ver con los recursos que tenía en el adiestramiento militar.')
@@ -187,9 +188,9 @@ import * as arsenal from './arsenal.js'
         props.estelarion.saltoIntergaláctico()
         this.personajes.get(cast.narrador.getName()).narrar(`La nave ${props.estelarion.getName()} consume gran cantidad de combustible tras el salto intergaláctico, pero tras el salto se disponen a descender al planeta de reparaciones...`);
         props.estelarion.aterrizar()
-        this.personajes.get(cast.narrador.getName()).narrar('La nave de la tripulación aterriza en el misterioso planeta Nexus Heaven, después de un largo viaje. Al bajar de la nave, son recibidos por un sabio en aeronaves muy mayor y sabio, quien los observa con curiosidad.');
-        this.personajes.get(cast.sabio.getName()).hablar('Bienvenidos a Nexus Heaven, viajeros del espacio. Soy el sabio Sabio, y es un honor recibir a visitantes tan distinguidos como ustedes.');
-        this.personajes.get(cast.elara.getName()).hablar('Gracias por recibirnos, sabio Sabio. Hemos llegado en busca de información sobre una llave que podría ser crucial para nuestra misión de cerrar la Brecha de Crono.');
+        this.personajes.get(cast.narrador.getName()).narrar('La nave de la tripulación aterriza en el misterioso planeta Nexus Heaven, después de un largo viaje. Al bajar de la nave, son recibidos por un sabio en aeronaves muy mayor e inteligente, quien los observa con curiosidad.');
+        this.personajes.get(cast.sabio.getName()).hablar('Bienvenidos a Nexus Heaven, viajeros del espacio. Soy el sabio de la ciudad, y es un honor recibir a visitantes tan distinguidos como ustedes.');
+        this.personajes.get(cast.elara.getName()).hablar('Gracias por recibirnos, sabio. Hemos llegado en busca de información sobre una llave que podría ser crucial para nuestra misión de cerrar la Brecha de Crono.');
         this.personajes.get(cast.sabio.getName()).hablar('Ah, la Brecha de Crono. He escuchado rumores sobre esa problemática. Pero aquí en Nexus Heaven, también circula un rumor, un rumor sobre la existencia de esa llave que buscan.');
         this.personajes.get(cast.samuel.getName()).hablar('¿Tiene información que pueda ayudarnos? ¿Dónde se encuentra la llave?');
         this.personajes.get(cast.sabio.getName()).hablar('Tengo un mapa, un mapa antiguo que podría conducirlos a la ubicación de la llave. Sin embargo, antes de dárselos, necesito hacerles una oferta.');
@@ -452,7 +453,6 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.nguyen)
         this.addCharacter(cast.alex)
         this.addCharacter(cast.ramirez)
-        this.addItem(props.botiquin)
         this.addItem(props.traje)
         this.addItem(props.key)
         this.personajes.get(cast.maria.getName()).hablar("No puedo creer que hayamos dejado al doctor atrás, después de lo mucho que nos ayudó. ¡Pudimos haber hecho algo para salvarlo!");
@@ -540,8 +540,6 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.AIDA)
         this.addCharacter(cast.elara)
         this.addCharacter(cast.samuel)
-        this.addCharacter(cast.maria)
-        this.addCharacter(cast.nguyen)
         this.addCharacter(cast.alex)
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
@@ -586,7 +584,6 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.AIDA)
         this.addCharacter(cast.elara)
         this.addCharacter(cast.samuel)
-        this.addCharacter(cast.maria)
         this.addCharacter(cast.nguyen)
         this.addCharacter(cast.alex)
         this.addCharacter(cast.ramirez)
@@ -856,7 +853,7 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.key)
-        this.personajes.get(cast.elara.getName()).hablar("Es extraño, ¿no creen? Un planeta sin signos de vida, pero con un acertijo en esta cueva. ¿Qué podría significar?");
+        this.personajes.get(cast.elara.getName()).hablar(`Es extraño, ¿no creen? Un planeta ${props.nevado.getEstado()} en pleno ${props.nevado.getEstacion()} ,sin signos de vida, pero con un acertijo en esta cueva. ¿Qué podría significar?`);
         this.personajes.get(cast.maria.getName()).hablar("Podría ser una prueba. Como si estuviera destinada a ser descubierta por alguien.");
         this.personajes.get(cast.samuel.getName()).hablar("Es fascinante. Nguyen siempre decía que el universo es un rompecabezas gigante esperando a ser resuelto.");
         this.personajes.get(cast.alex.getName()).hablar("Oigan, siento una especie de conexión con el acertijo, como si Nguyen nos guiara. Debemos resolverlo.");
