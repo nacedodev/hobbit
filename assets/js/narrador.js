@@ -1,9 +1,9 @@
 import { Personaje } from "./personaje.js";
-
-
+import { Escena } from "./escena.js";
 
 export class Narrador extends Personaje{
-    
+
+    static idioma = 'Español'
 
     constructor(nombre){
         super(nombre)
@@ -21,7 +21,8 @@ export class Narrador extends Personaje{
               lineElement.scrollIntoView({ behavior: "smooth" });
 
             }, Personaje.timeout);
-        
+              
+            Escena.duracionEscena += Personaje.timeout
             Personaje.timeout += palabrasEnTexto * 260;
           }
     }

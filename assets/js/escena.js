@@ -4,7 +4,7 @@ export class Escena {
 
   titulo = null;
   lugar = null;
-  
+  static duracionEscena = 0 // EN SEGUNDOS
   
   constructor(titulo = '',lugar = '') {
     this.titulo = titulo

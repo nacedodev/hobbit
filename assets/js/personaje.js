@@ -1,4 +1,5 @@
 import { Item } from './item.js'
+import { Escena } from './escena.js';
 
 export class Personaje {
   #nombre = null;
@@ -27,6 +28,7 @@ export class Personaje {
       
     }, Personaje.timeout);
 
+    Escena.duracionEscena += Personaje.timeout
     Personaje.timeout += palabrasEnTexto * 250;
   }
 

@@ -6,8 +6,6 @@ import { Personaje } from "./personaje.js";
           }
 
           hasKey() {
-            
-              
               setTimeout(() => {
                   const inventario = this.getInventario();
                   let $key = document.getElementById('key')

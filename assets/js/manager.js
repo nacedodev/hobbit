@@ -4,6 +4,7 @@ import * as props from './props.js'
 import { IA } from "./IA.js";
 import { progressBar } from "./progressBar.js";
 import { Personaje } from "./personaje.js";
+import * as arsenal from './arsenal.js'
 
   class Escena1 extends Escena {
     constructor() {
@@ -21,7 +22,6 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.alex)
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
-        this.addItem(props.traje)
         this.addItem(props.key)
         this.personajes.get(cast.narrador.getName()).narrar('La Capitana Elara Silva se encuentra al frente de la sala. AIDA proyecta información relevante en una pantalla holográfica en el centro de la mesa , el resto de la tripulación mira espectante.')
         this.personajes.get(cast.elara.getName()).hablar('Bienvenidos a bordo de la nave Estelarion. Cada uno de ustedes jugará un papel crucial en esta misión, la cual no tiene fecha de retorno, pero sí un objetivo claro: salvar a nuestro planeta natal, Terra Nova, de una glaciación inminente que solo se podrá revertir de una forma. El Dr. Samuel nos lo explicará en detalle.')
@@ -38,9 +38,10 @@ import { Personaje } from "./personaje.js";
         this.personajes.get(cast.elara.getName()).hablar('AIDA, muestra el plan de ruta de la pista que nos ha llegado desde el planeta Lunaris.')
         this.personajes.get(cast.ramirez.getName()).hablar('Espera, ¿quién es AIDA?')
         this.personajes.get(cast.elara.getName()).hablar('Es la IA integrada en la nave, Asistente de Exploración Espacial, o AIDA para abreviar.')
+        this.personajes.get(cast.AIDA.getName()).hablar(`${IA.hablarBinario()}`)
         this.personajes.get(cast.AIDA.getName()).hablar('Mostrando el plan de ruta. Quedan 23 horas para salir de la galaxia Arkanis...')
         this.personajes.get(cast.alex.getName()).hablar('Llevo años estudiando el universo y confío plenamente en que lograremos encontrar la llave. Déjadme ser el guía en esta misión')
-        //nave.temblar
+        props.estelarion.temblar()
         this.personajes.get(cast.samuel.getName()).hablar('¿Alguien más ha escuchado eso?')
         this.personajes.get(cast.AIDA.getName()).hablar('Daño grave en la cubierta exterior de la nave. Analizando probabilidad de supervivencia...')
         this.personajes.get(cast.elara.getName()).hablar('Mantengan la calma. Restos espaciales habrán rozado el exterior. Podemos repararlo.')
@@ -84,6 +85,7 @@ import { Personaje } from "./personaje.js";
         this.addCharacter(cast.michael)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        props.estelarion.aterrizar()
         this.personajes.get(cast.narrador.getName()).narrar('La tripulación, siguiendo la orden de Alex, consigue descender en un planeta, en el que creen que es el planeta tierra. Dicho planeta, tiene una apariencia un poco extraña, y la línea temporal también. Los tripulantes notan que no se encuentran en la misma línea temporal y deciden investigar un poco más sobre dónde se encuentran y en qué año, a través de algunos objetos de la nave');
         this.personajes.get(cast.samuel.getName()).hablar('¿Dónde estamos? ¿Qué es este lugar?');
         this.personajes.get(cast.elara.getName()).hablar('¡Desde arriba parecía el planeta tierra actual, pero por lo que veo, me temo que estamos en el planeta tierra del futuro!');
@@ -139,14 +141,17 @@ import { Personaje } from "./personaje.js";
         this.personajes.get(cast.michael.getName()).hablar('¡Para nada! ¡Tirad las armas y levantad las manos! ¡Voy a salir a hablar con vosotros!');
         this.personajes.get(cast.narrador.getName()).narrar('Los tripulantes se disponen a tirar las armas y a levantar las manos. Michael ve las armas en el suelo y se dispone a salir de la trinchera mientras les apunta con una ametralladora láser.');
         this.personajes.get(cast.michael.getName()).hablar('¿De dónde habéis sacado esos juguetes para niños? ¡Esas armas son de hace 500 años!');
-        this.personajes.get(cast.alex.getName()).hablar('¡Venimos del 2023 pero al haberse averiado la nave y hemos acabado aquí!');
+        this.personajes.get(cast.alex.getName()).hablar('¡Venimos del 2023 pero al haberse averiado la nave y hemos acabado aquí! , de que elemento es ese arma?');
+        arsenal.ametralladora_laser.obtenerElemento()
         this.personajes.get(cast.michael.getName()).hablar('¡Pues estamos en el 2573!');
         this.personajes.get(cast.ramirez.getName()).hablar('¡Al final el juguetito sí que funcionaba!');
         this.personajes.get(cast.alex.getName()).hablar('¡Te lo dije!');
         this.personajes.get(cast.michael.getName()).hablar('¡Esta ciudad ha sido arrasada por un dragón, y viene cada noche a defenderla, ya que se ha adueñado de ella!');
         this.personajes.get(cast.alex.getName()).hablar('¿Hay armas de esta época aquí?');
         this.personajes.get(cast.michael.getName()).hablar('¡Por supuesto! ¡Alex, coge esta ametralladora láser! ¡elara, coge estas bombas eléctricas! ¡Sargento Ramirez, coge este arco con flechas venenosas! ¡Teniente, coge ese hacha eléctrica! ¡Yo llevaré unos shurikens de fuego!');
-        this.personajes.get(cast.narrador.getName()).narrar('Todos cogen las armas y se disponen a ir en busca del dragón. Tras una intensa lucha, derrotan al dragón. Y Michael como recompensa les da las piezas necesarias para reparar la nave.');
+        arsenal.ametralladora_laser.atacar()
+        arsenal.granadas_electricas.atacar()
+        this.personajes.get(cast.narrador.getName()).narrar('Tras usar las armas contra el dragón en una intensa lucha, derrotan al dragón. Y Michael como recompensa les da las piezas necesarias para reparar la nave.');
         this.personajes.get(cast.michael.getName()).hablar('Por fin todo acabó , me encantaría formar parte de esta aventura , que te parece Alex? Está claro que necesitais a un buen Ingeniero');
         this.personajes.get(cast.alex.getName()).hablar('¡Gracias por todo Michael, ahora que tenemos todo lo necesario para reparar la nave, debemos partir , ');
         progressBar(Personaje.timeout + 1500)
@@ -917,7 +922,7 @@ import { Personaje } from "./personaje.js";
         this.personajes.get(cast.maria.getName()).hablar("La esperanza ha regresado a Terra Nova. Esto es un regalo para todas las generaciones futuras.");
         this.personajes.get(cast.alex.getName()).hablar("Hemos cumplido nuestra misión compañeros. Hemos salvado a Terra Nova y a su gente. Esto es un testimonio de lo que podemos lograr cuando trabajamos juntos. Muchísimas gracias por esta aventura.");
         this.personajes.get(cast.narrador.getName()).narrar("La tripulación observa con emoción mientras el planeta renace. La esperanza y el futuro brillan intensamente en el horizonte de Terra Nova, y su historia ha tomado un nuevo rumbo.");
-
+        console.log(Escena.duracionEscena)
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
          
