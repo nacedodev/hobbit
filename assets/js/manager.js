@@ -86,11 +86,8 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.michael)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
-        this.personajes.get(cast.narrador.getName()).narrar('La tripulación, siguiendo la orden de Alex se dispone a realizar un salto intergaláctico...');
-        props.estelarion.saltoIntergaláctico()
-        this.personajes.get(cast.narrador.getName()).narrar(`El salto intergaláctico supuso un gran consumo de combustible para la nave , pero todo salío correctamente , la nave ${props.estelarion.getName()} se aproximaba al planeta...`)
         props.estelarion.aterrizar()
-        this.personajes.get(cast.narrador.getName()).narrar('La tripulación, consigue descender en un planeta, en el que creen que es el planeta tierra. Dicho planeta, tiene una apariencia un poco extraña, y la línea temporal también. Los tripulantes notan que no se encuentran en la misma línea temporal y deciden investigar un poco más sobre dónde se encuentran y en qué año, a través de algunos objetos de la nave');
+        this.personajes.get(cast.narrador.getName()).narrar('La tripulación, siguiendo la orden de Alex, consigue descender en un planeta, en el que creen que es el planeta tierra. Dicho planeta, tiene una apariencia un poco extraña, y la línea temporal también. Los tripulantes notan que no se encuentran en la misma línea temporal y deciden investigar un poco más sobre dónde se encuentran y en qué año, a través de algunos objetos de la nave');
         this.personajes.get(cast.samuel.getName()).hablar('¿Dónde estamos? ¿Qué es este lugar?');
         this.personajes.get(cast.elara.getName()).hablar('¡Desde arriba parecía el planeta tierra actual, pero por lo que veo, me temo que estamos en el planeta tierra del futuro!');
         this.personajes.get(cast.ramirez.getName()).hablar('¿Futuro? ¡Jajaja, déjate de bobadas! ¡Estaremos en otro planeta parecido al planeta tierra!');
@@ -187,8 +184,10 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.sabio)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        props.estelarion.saltoIntergaláctico()
+        this.personajes.get(cast.narrador.getName()).narrar(`La nave ${props.estelarion.getName()} consume gran cantidad de combustible tras el salto intergaláctico, pero tras el salto se disponen a descender al planeta de reparaciones...`);
         props.estelarion.aterrizar()
-        this.personajes.get(cast.narrador.getName()).narrar('La nave de la tripulación aterriza en el misterioso planeta Nexus Heaven, después de un largo viaje que ha consumido una gran cantidad de combustible. Al bajar de la nave, son recibidos por un sabio en aeronaves muy mayor y sabio, quien los observa con curiosidad.');
+        this.personajes.get(cast.narrador.getName()).narrar('La nave de la tripulación aterriza en el misterioso planeta Nexus Heaven, después de un largo viaje. Al bajar de la nave, son recibidos por un sabio en aeronaves muy mayor y sabio, quien los observa con curiosidad.');
         this.personajes.get(cast.sabio.getName()).hablar('Bienvenidos a Nexus Heaven, viajeros del espacio. Soy el sabio Sabio, y es un honor recibir a visitantes tan distinguidos como ustedes.');
         this.personajes.get(cast.elara.getName()).hablar('Gracias por recibirnos, sabio Sabio. Hemos llegado en busca de información sobre una llave que podría ser crucial para nuestra misión de cerrar la Brecha de Crono.');
         this.personajes.get(cast.sabio.getName()).hablar('Ah, la Brecha de Crono. He escuchado rumores sobre esa problemática. Pero aquí en Nexus Heaven, también circula un rumor, un rumor sobre la existencia de esa llave que buscan.');
