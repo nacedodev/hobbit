@@ -117,7 +117,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.nguyen.getName()).hablar('¡Quizá allí se encuentren los objetos que necesito para reparar la nave!');
         this.personajes.get(cast.ramirez.getName()).hablar('¿Me vais a hacer ir hasta allí andando? ¿En serio?');
         this.personajes.get(cast.elara.getName()).hablar('¡Tripulación! ¡Nos vamos de excursión! ¡Nguyen, quédate aquí cuidando de la nave!');
-        this.personajes.get(cast.nguyen.getName()).hablar('¡Sí, elara!');
+        this.personajes.get(cast.nguyen.getName()).hablar('¡Sí, Elara!');
         this.personajes.get(cast.maria.getName()).hablar('¡Coged las armas!');
         this.personajes.get(cast.ramirez.getName()).hablar('¡Qué pereza!');
         this.personajes.get(cast.alex.getName()).hablar('¡Deja de quejarte, equípate y vamos a buscar las piezas!');
@@ -137,7 +137,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.michael.getName()).hablar('¿Quién anda ahí? ¡Como des un paso más estarás acabado!');
         this.personajes.get(cast.alex.getName()).hablar('¡Tranquilo! ¡No venimos buscando enfrentamientos!');
         this.personajes.get(cast.michael.getName()).hablar('¿Cuántos sois y qué hacéis aquí?');
-        this.personajes.get(cast.alex.getName()).hablar('¡Somos cuatro, Alex, Sargento Ramirez, Teniente Maria Riordan y la elara Elara Silva! ¡Se nos ha estropeado la nave y hemos aterrizado en este planeta para buscar piezas y repararla! ¡Solo queremos volver a casa!');
+        this.personajes.get(cast.alex.getName()).hablar('¡Somos cuatro, Alex, Sargento Ramirez, Teniente Maria Riordan y la capitana Elara Silva! ¡Se nos ha estropeado la nave y hemos aterrizado en este planeta para buscar piezas y repararla! ¡Solo queremos volver a casa!');
         this.personajes.get(cast.michael.getName()).hablar('¿Y por qué no habéis huido al ver al dragón?');
         this.personajes.get(cast.alex.getName()).hablar('¿Dragón? ¿Nos estás tomando el pelo?');
         this.personajes.get(cast.michael.getName()).hablar('¡Para nada! ¡Tirad las armas y levantad las manos! ¡Voy a salir a hablar con vosotros!');
@@ -150,7 +150,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.alex.getName()).hablar('¡Te lo dije!');
         this.personajes.get(cast.michael.getName()).hablar('¡Esta ciudad ha sido arrasada por un dragón, y viene cada noche a defenderla, ya que se ha adueñado de ella!');
         this.personajes.get(cast.alex.getName()).hablar('¿Hay armas de esta época aquí?');
-        this.personajes.get(cast.michael.getName()).hablar('¡Por supuesto! ¡Alex, coge esta ametralladora láser! ¡elara, coge estas bombas eléctricas! ¡Sargento Ramirez, coge este arco con flechas venenosas! ¡Teniente, coge ese hacha eléctrica! ¡Yo llevaré unos shurikens de fuego!');
+        this.personajes.get(cast.michael.getName()).hablar('¡Por supuesto! ¡Alex, coge esta ametralladora láser! ¡Elara, coge estas bombas eléctricas! ¡Sargento Ramirez, coge este arco con flechas venenosas! ¡Teniente, coge ese hacha eléctrica! ¡Yo llevaré unos shurikens de fuego!');
         arsenal.ametralladora_laser.atacar()
         arsenal.granadas_electricas.atacar()
         this.personajes.get(cast.narrador.getName()).narrar('Tras usar las armas contra el dragón en una intensa lucha, derrotan al dragón. Y Michael como recompensa les da las piezas necesarias para reparar la nave.');
@@ -196,7 +196,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.sabio.getName()).hablar('Tengo un mapa, un mapa antiguo que podría conducirlos a la ubicación de la llave. Sin embargo, antes de dárselos, necesito hacerles una oferta.');
         this.personajes.get(cast.alex.getName()).hablar('¿Una oferta? ¿Qué tiene en mente?');
         this.personajes.get(cast.sabio.getName()).hablar('Nuestro planeta, Nexus Heaven, necesita desesperadamente la experiencia y habilidades de la Teniente María. En su estancia aquí, podrá ayudarnos a mejorar nuestras aeronaves y tecnología. Pero, lamento decirlo, si ella acepta ayudarnos, no podrá participar en su aventura. Es posible que nunca vuelva a verlos.');
-        this.personajes.get(cast.maria.getName()).hablar('¿Debo quedarme aquí, elara?');
+        this.personajes.get(cast.maria.getName()).hablar('¿Debo quedarme aquí, Elara?');
         this.personajes.get(cast.elara.getName()).hablar('La decisión es de Alex. Es él quien debe aceptar o rechazar esta oferta.');
         this.personajes.get(cast.ramirez.getName()).hablar('Alex, la decisión no es fácil, pero piensa en lo que es mejor para el equipo y la misión.');
         progressBar(Personaje.timeout + 1500)
@@ -240,7 +240,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.alex.getName()).hablar('Nguyen, ¿estás bien? Hemos notado un problema en tu traje.');
         this.personajes.get(cast.nguyen.getName()).hablar('Estoy bien, pero el traje ha sufrido daños. No sé cuánto tiempo más podré resistir aquí afuera.');
         this.personajes.get(cast.elara.getName()).hablar('Nguyen, eres un verdadero héroe. Si sientes que es peligroso quedarte más tiempo, regresa a la nave. Tu seguridad es lo más importante.');
-        this.personajes.get(cast.nguyen.getName()).hablar('No, elara, no puedo dejarlo a medias. Estoy cerca de completar la reparación. Solo necesito unos minutos más.');
+        this.personajes.get(cast.nguyen.getName()).hablar('No, Elara, no puedo dejarlo a medias. Estoy cerca de completar la reparación. Solo necesito unos minutos más.');
         this.personajes.get(cast.narrador.getName()).narrar('Con determinación, Nguyen continúa trabajando, sabiendo que cada segundo cuenta. La tripulación observa ansiosamente mientras lucha por restaurar la nave a su pleno funcionamiento.');
         this.personajes.get(cast.ramirez.getName()).hablar('Tiene agallas, eso hay que reconocérselo.');
         this.personajes.get(cast.maria.getName()).hablar('Es un modelo de valentía y sacrificio.');
@@ -286,8 +286,8 @@ import * as arsenal from './arsenal.js'
         this.addItem(props.botiquin)
         this.addItem(props.traje)
         this.personajes.get(cast.narrador.getName()).narrar('Después de que el michael se une a la tripulación, todos se reúnen en la sala de conferencias de la nave Estelarion.')
-        this.personajes.get(cast.elara.getName()).hablar('¡Bienvenido a bordo, michael! Soy la elara Elara Silva.')
-        this.personajes.get(cast.michael.getName()).hablar('Mucho gusto, elara Silva.')
+        this.personajes.get(cast.elara.getName()).hablar('¡Bienvenido a bordo, michael! Soy la capitana Elara Silva.')
+        this.personajes.get(cast.michael.getName()).hablar('Mucho gusto, Elara Silva.')
         this.personajes.get(cast.samuel.getName()).hablar('Cuéntanos algo acerca de ti.')
         this.personajes.get(cast.michael.getName()).hablar('He dedicado mi vida a estudiar la historia del universo y artefactos misteriosos.')
         this.personajes.get(cast.alex.getName()).hablar('¡Eso suena genial!')
@@ -308,7 +308,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.michael.getName()).hablar('por lo que veo la nave solo tiene suficiente combustible para un viaje de ida y vuelta al Confín del Espacio. Una vez que lleguemos allí, no tendremos suficiente combustible para regresar.')
         this.personajes.get(cast.ramirez.getName()).hablar('Eso es un dilema serio. ¿Estás seguro de que esta es la única opción, Michael?')
         this.personajes.get(cast.michael.getName()).hablar('Hay otra opción, pero es arriesgada. Podemos usar la tecnología a bordo de la Estelarion para realizar un viaje en el tiempo y volver al inicio de la aventura. Esto nos daría una segunda oportunidad, pero no sabríamos si encontraríamos las mismas pistas.')
-        this.personajes.get(cast.samuel.getName()).hablar('Ambas opciones son arriesgadas, pero necesitamos decidir. elara, ¿qué piensa al respecto?')
+        this.personajes.get(cast.samuel.getName()).hablar('Ambas opciones son arriesgadas, pero necesitamos decidir. Elara, ¿qué piensa al respecto?')
         this.personajes.get(cast.elara.getName()).hablar('La decisión es de Alex, ya que es nuestro experto en la búsqueda de la llave y también quien se unió a nosotros en un momento crucial. Alex, ¿cuál es tu elección?')
         
         
@@ -347,7 +347,7 @@ import * as arsenal from './arsenal.js'
         this.addItem(props.traje)
         this.personajes.get(cast.narrador.getName()).narrar('La decisión de Alex de emprender el viaje a los Confínes del Universo fue tomada. La tripulación se prepara meticulosamente para la expedición, consciente de que este podría ser un punto de no retorno en su búsqueda de la llave para salvar Terra Nova. La nave Estelarion se encuentra lista para el salto intergaláctico hacia lo desconocido.');
         this.personajes.get(cast.elara.getName()).hablar('Bien Alex, vamos a seguir las pistas de Michael a los Confínes del Universo. Todos prepárense, este viaje será largo, y también les pido que confíen en que podremos superar cualquier desafío que se nos presente.');
-        this.personajes.get(cast.alex.getName()).hablar('Oído, elara. Estoy listo para esto, y estoy dispuesto a arriesgarlo todo para salvar al planeta.');
+        this.personajes.get(cast.alex.getName()).hablar('Oído, Elara. Estoy listo para esto, y estoy dispuesto a arriesgarlo todo para salvar al planeta.');
         this.personajes.get(cast.narrador.getName()).narrar('La tripulación se prepara y con una tensión palpable, la Estelarion se eleva hacia el espacio enfrentando la vastedad del universo y la incertidumbre que conlleva.');
         this.personajes.get(cast.michael.getName()).hablar('¿Cómo te sientes?');
         this.personajes.get(cast.alex.getName()).hablar('Algo ansioso.');
@@ -416,7 +416,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.elara.getName()).hablar("Bueno, parece que hemos obtenido las piezas que necesitábamos, pero estamos en una situación complicada. No podemos ignorar la amenaza de los piratas espaciales que nos persiguen, y lo más importante, el Dr. Samuel no está a bordo.");
         this.personajes.get(cast.ramirez.getName()).hablar("No me gusta la idea de dejar atrás a uno de los nuestros. Ese tipo puede ser un dolor de cabeza, pero es nuestro dolor de cabeza.");
         this.personajes.get(cast.maria.getName()).hablar("Y, ¿qué hacemos con la información de AIDA sobre Astralis-9? Podríamos encontrar la llave que necesitamos para cerrar la Brecha de Crono y evitar que se desencadene el caos en todas las líneas temporales.");
-        this.personajes.get(cast.nguyen.getName()).hablar("La nave está reparada y lista para partir. La decisión es suya, elara.");
+        this.personajes.get(cast.nguyen.getName()).hablar("La nave está reparada y lista para partir. La decisión es suya, Elara.");
         this.personajes.get(cast.elara.getName()).hablar("Bien, escuchemos a AIDA. ¿Dónde está Astralis-9 y cómo llegamos allí?");
         this.personajes.get(cast.AIDA.getName()).hablar("Astralis-9 se encuentra en el sector Galaxia Desolada, a unas coordenadas específicas. Puedo cargar los datos de navegación en la nave y guiarlos allí.");
         this.personajes.get(cast.alex.getName()).hablar("Debemos de tomar una decisión. Ir a por la llave o luchar y salvar al doctor.");
@@ -815,18 +815,19 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.nguyen)
         this.addCharacter(cast.alex)
         this.addCharacter(cast.ramirez)
+        this.addCharacter(cast.superior)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
         this.personajes.get(cast.narrador.getName()).narrar('Alex: [Mirando el brillo en la distancia] ¿Qué es eso? Parece una señal, pero no podemos desviarnos de nuestro objetivo principal.');
         this.personajes.get(cast.elara.getName()).hablar('Dr. Samuel Voss: Tienes razón, Alex. No podemos permitirnos distraernos ahora. Debemos mantenernos enfocados en encontrar la llave para salvar a Terra Nova.');
         this.personajes.get(cast.ramirez.getName()).hablar('Sargento Ramirez: Estoy de acuerdo. No sabemos qué peligros podrían acecharnos si nos desviamos de nuestro camino. Sigamos adelante.');
-        this.personajes.get(cast.elara.getName()).hablar('Capitana Elara Silva: Confío en su juicio, equipo. Sigamos avanzando y busquemos pistas que nos lleven a la llave.');
+        this.personajes.get(cast.elara.getName()).hablar('Confío en su juicio, equipo. Sigamos avanzando y busquemos pistas que nos lleven a la llave.');
         this.personajes.get(cast.narrador.getName()).narrar('La tripulación continúa su camino, ignorando el misterioso brillo a lo lejos. Sin embargo, desconocen que ese brillo era Nguyen, tratando de guiarlos y evitar su trágico destino. Lamentablemente, una nave que participó en el funeral de Nguyen tiene como objetivo neutralizar al equipo. Después de un intento de huida desesperado, la nave enemiga logra alcanzarlos.');
-        this.personajes.get(cast.elara.getName()).hablar('Capitana Elara Silva: ¡No! ¡No podemos permitir que nos capturen!');
+        this.personajes.get(cast.elara.getName()).hablar('¡No! ¡No podemos permitir que nos capturen!');
         this.personajes.get(cast.maria.getName()).hablar('Teniente Maria Riordan: ¡Luchemos hasta el final! No dejaremos que nos derroten.');
-        this.personajes.get(cast.alex.getName()).hablar('Alex: [Herido y exhausto] No... puedo... creerlo...');
+        this.personajes.get(cast.alex.getName()).hablar('[Herido y exhausto] No... puedo... creerlo...');
         this.personajes.get(cast.narrador.getName()).narrar('Con gran pesar, todos los miembros del equipo mueren debido a una fuga en la nave que no pudo ser reparada. Justo antes de que Alex muera, una especie superior, con la habilidad de viajar en el tiempo, se le aparece y le propone un trato.');
-        this.personajes.get(cast.samuel.getName()).hablar('Ser Superior: Alex, tienes una elección. Puedes morir y poner fin a este juego, o puedes viajar al pasado y revertir esta situación. A cambio, debes asegurarte de que la civilización de Terra Nova prospere y sobreviva.');
+        this.personajes.get(cast.superior.getName()).hablar(' Alex, tienes una elección. Puedes morir y poner fin a este juego, o puedes viajar al pasado y revertir esta situación. A cambio, debes asegurarte de que la civilización de Terra Nova prospere y sobreviva.');
         progressBar(Personaje.timeout + 1500)
         setTimeout(() => {
            let respuesta = window.confirm("viajar al pasado?");

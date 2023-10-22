@@ -26,3 +26,5 @@ export let michael = new Personaje('Michael Grey',especialidades.ingeniero,orige
 export let sabio = new Personaje('Sabio',especialidades.sabio,origenes.nexus)
 
 export let paisano = new Personaje('Paisano',origenes.nexus)
+
+export let superior = new Personaje('Ser Superior')
