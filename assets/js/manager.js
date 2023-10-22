@@ -103,7 +103,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.nguyen.getName()).hablar('¡Eso, yo confío en él!');
         this.personajes.get(cast.elara.getName()).hablar('¿Lo encuentras, Alex?');
         this.personajes.get(cast.alex.getName()).hablar('¡Aquí está! ¡Vamos a ver qué nos dice!');
-        this.personajes.get(cast.ramirez.getName()).hablar('El reloj tarda un tiempo en calcular todos los procesos. Pero finalmente, les muestra el año.');
+        this.personajes.get(cast.narrador.getName()).narrar('El reloj tarda un tiempo en calcular todos los procesos. Pero finalmente, les muestra el año.');
         this.personajes.get(cast.ramirez.getName()).hablar('¿Te ha dado alguna información el trasto ese?');
         this.personajes.get(cast.elara.getName()).hablar('¡Algún problema, Alex?');
         this.personajes.get(cast.alex.getName()).hablar('¡Sí! ¡Pero...!');
