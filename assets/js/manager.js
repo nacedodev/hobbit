@@ -285,8 +285,8 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.michael)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
-        this.personajes.get(cast.narrador.getName()).narrar('Después de que el michael se une a la tripulación, todos se reúnen en la sala de conferencias de la nave Estelarion.')
-        this.personajes.get(cast.elara.getName()).hablar('¡Bienvenido a bordo, michael! Soy la capitana Elara Silva.')
+        this.personajes.get(cast.narrador.getName()).narrar('Después de que el Michael se une a la tripulación, todos se reúnen en la sala de conferencias de la nave Estelarion.')
+        this.personajes.get(cast.elara.getName()).hablar('¡Bienvenido a bordo, Michael! Soy la capitana Elara Silva.')
         this.personajes.get(cast.michael.getName()).hablar('Mucho gusto, Elara Silva.')
         this.personajes.get(cast.samuel.getName()).hablar('Cuéntanos algo acerca de ti.')
         this.personajes.get(cast.michael.getName()).hablar('He dedicado mi vida a estudiar la historia del universo y artefactos misteriosos.')
@@ -360,7 +360,7 @@ import * as arsenal from './arsenal.js'
         this.personajes.get(cast.michael.getName()).hablar('Así como escuchaste. No sé si has oído hablar del planeta Khachbord.');
         this.personajes.get(cast.alex.getName()).hablar('Sí, supe que la llave nunca fue encontrada y que el planeta fue destruido, muchas personas murieron. Pero, ¿qué tiene que ver en todo esto?');
         this.personajes.get(cast.michael.getName()).hablar('Yo fui el único sobreviviente.');
-        this.personajes.get(cast.alex.getName()).hablar('Cómo lo siento. Y-yo, no sé qué decirte.');
+        this.personajes.get(cast.alex.getName()).hablar('Cómo lo siento... no sé qué decirte.');
         this.personajes.get(cast.michael.getName()).hablar('No tenía idea de eso, ¿por qué no lo mencionaste antes?');
         this.personajes.get(cast.michael.getName()).hablar('No me gusta hablar del tema, pero te lo digo porque no quiero que le pase lo mismo a Terra Nova.');
         this.personajes.get(cast.alex.getName()).hablar('Gracias por compartir esto conmigo y por preocuparte, de nuevo lamento todo lo que pasó con tu planeta, pero bueno, gracias a tu ayuda podremos evitar que este y que otros planetas pasen una situación similar.');
