@@ -818,7 +818,7 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.superior)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
-        this.personajes.get(cast.narrador.getName()).narrar('Alex: [Mirando el brillo en la distancia] ¿Qué es eso? Parece una señal, pero no podemos desviarnos de nuestro objetivo principal.');
+        this.personajes.get(cast.narrador.getName()).narrar('[Mirando el brillo en la distancia] ¿Qué es eso? Parece una señal, pero no podemos desviarnos de nuestro objetivo principal.');
         this.personajes.get(cast.elara.getName()).hablar('Dr. Samuel Voss: Tienes razón, Alex. No podemos permitirnos distraernos ahora. Debemos mantenernos enfocados en encontrar la llave para salvar a Terra Nova.');
         this.personajes.get(cast.ramirez.getName()).hablar('Sargento Ramirez: Estoy de acuerdo. No sabemos qué peligros podrían acecharnos si nos desviamos de nuestro camino. Sigamos adelante.');
         this.personajes.get(cast.elara.getName()).hablar('Confío en su juicio, equipo. Sigamos avanzando y busquemos pistas que nos lleven a la llave.');
