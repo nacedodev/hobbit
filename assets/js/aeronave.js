@@ -1,13 +1,13 @@
 import { Personaje } from "./personaje.js";
+import {Vehiculo} from "./vehiculo.js"
 
-export class Nave{
+export class Aeronave extends Vehiculo{
 
-        #nombre = null;
         #tipo = null;
         #estado = null;
 
-        constructor(nombre, tipo) {
-          this.#nombre = nombre;
+        constructor(nombre, matricula,tipo) {
+          super(nombre,matricula)
           this.#tipo = tipo;
           this.#estado = "operativo"; // Puede ser "averiado", "reparación", etc.
         }
@@ -19,7 +19,7 @@ export class Nave{
                   const lineElement = document.createElement('p');
                   lineElement.innerHTML = texto;
                   lineElement.style.marginTop = '30px'
-                  lineElement.style.color = 'gray'
+                  lineElement.style.color = 'lightsteelblue'
                   lineElement.classList.add('fadein'); // Aplicar la clase para el efecto de fadeIn
                   $historia.appendChild(lineElement);
                   lineElement.scrollIntoView({ behavior: "smooth" });
@@ -32,11 +32,11 @@ export class Nave{
         aterrizar() {
             let $historia = document.getElementById('historia')
             setTimeout(() => {
-              let texto = " Aterrizaje inminente , abrochense los cinturones , la nave Estelarion se encargará del resto...";
+              let texto = " Aterrizaje inminente , abrochense los cinturones , la aeronave se encargará del resto...";
               const lineElement = document.createElement('p');
               lineElement.innerHTML = texto;
               lineElement.style.marginTop = '30px'
-              lineElement.style.color = 'gray'
+              lineElement.style.color = 'lightsteelblue'
               lineElement.classList.add('fadein'); // Aplicar la clase para el efecto de fadeIn
               $historia.appendChild(lineElement);
               lineElement.scrollIntoView({ behavior: "smooth" });
@@ -44,6 +44,10 @@ export class Nave{
             }, Personaje.timeout);
         
             Personaje.timeout += 1000;
+          }
+
+          getTipo(){
+            return this.#tipo
           }
         }
       

@@ -1,6 +1,6 @@
 import { escenas } from './manager.js'
 
-escenas[1].run()
+escenas[2].run()
 
 
  

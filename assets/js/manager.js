@@ -23,7 +23,8 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.ramirez)
         this.addItem(props.botiquin)
         this.addItem(props.key)
-        this.personajes.get(cast.narrador.getName()).narrar('La Capitana Elara Silva se encuentra al frente de la sala. AIDA proyecta información relevante en una pantalla holográfica en el centro de la mesa , el resto de la tripulación mira espectante.')
+        this.personajes.get(cast.narrador.getName()).narrar('La Capitana Elara Silva se encuentra al frente de la sala. AIDA proyecta información relevante en una pantalla holográfica en el centro de la mesa , el resto de la tripulación mira espectante, antes de comenzar , una breve descripción de la nave Estelarion: ')
+        props.estelarion.getInfo()
         this.personajes.get(cast.elara.getName()).hablar('Bienvenidos a bordo de la nave Estelarion. Cada uno de ustedes jugará un papel crucial en esta misión, la cual no tiene fecha de retorno, pero sí un objetivo claro: salvar a nuestro planeta natal, Terra Nova, de una glaciación inminente que solo se podrá revertir de una forma. El Dr. Samuel nos lo explicará en detalle.')
         this.personajes.get(cast.samuel.getName()).hablar('Hola a todos. Llevo años investigando esta glaciación y les contaré cuál es el objetivo de esta misión.')
         this.personajes.get(cast.AIDA.getName()).hablar('Proyectando mapa 3D de la superficie de Terra Nova...')
@@ -85,8 +86,11 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.michael)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        this.personajes.get(cast.narrador.getName()).narrar('La tripulación, siguiendo la orden de Alex se dispone a realizar un salto intergaláctico...');
+        props.estelarion.saltoIntergaláctico()
+        this.personajes.get(cast.narrador.getName()).narrar(`El salto intergaláctico supuso un gran consumo de combustible para la nave , pero todo salío correctamente , la nave ${props.estelarion.getName()} se aproximaba al planeta...`)
         props.estelarion.aterrizar()
-        this.personajes.get(cast.narrador.getName()).narrar('La tripulación, siguiendo la orden de Alex, consigue descender en un planeta, en el que creen que es el planeta tierra. Dicho planeta, tiene una apariencia un poco extraña, y la línea temporal también. Los tripulantes notan que no se encuentran en la misma línea temporal y deciden investigar un poco más sobre dónde se encuentran y en qué año, a través de algunos objetos de la nave');
+        this.personajes.get(cast.narrador.getName()).narrar('La tripulación, consigue descender en un planeta, en el que creen que es el planeta tierra. Dicho planeta, tiene una apariencia un poco extraña, y la línea temporal también. Los tripulantes notan que no se encuentran en la misma línea temporal y deciden investigar un poco más sobre dónde se encuentran y en qué año, a través de algunos objetos de la nave');
         this.personajes.get(cast.samuel.getName()).hablar('¿Dónde estamos? ¿Qué es este lugar?');
         this.personajes.get(cast.elara.getName()).hablar('¡Desde arriba parecía el planeta tierra actual, pero por lo que veo, me temo que estamos en el planeta tierra del futuro!');
         this.personajes.get(cast.ramirez.getName()).hablar('¿Futuro? ¡Jajaja, déjate de bobadas! ¡Estaremos en otro planeta parecido al planeta tierra!');
@@ -183,6 +187,7 @@ import * as arsenal from './arsenal.js'
         this.addCharacter(cast.sabio)
         this.addItem(props.botiquin)
         this.addItem(props.traje)
+        props.estelarion.aterrizar()
         this.personajes.get(cast.narrador.getName()).narrar('La nave de la tripulación aterriza en el misterioso planeta Nexus Heaven, después de un largo viaje que ha consumido una gran cantidad de combustible. Al bajar de la nave, son recibidos por un sabio en aeronaves muy mayor y sabio, quien los observa con curiosidad.');
         this.personajes.get(cast.sabio.getName()).hablar('Bienvenidos a Nexus Heaven, viajeros del espacio. Soy el sabio Sabio, y es un honor recibir a visitantes tan distinguidos como ustedes.');
         this.personajes.get(cast.elara.getName()).hablar('Gracias por recibirnos, sabio Sabio. Hemos llegado en busca de información sobre una llave que podría ser crucial para nuestra misión de cerrar la Brecha de Crono.');

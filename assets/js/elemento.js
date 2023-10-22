@@ -14,7 +14,7 @@ export class Elemento extends Tipo {
                   const lineElement = document.createElement('p');
                   lineElement.innerHTML = texto;
                   lineElement.style.marginTop = '30px'
-                  lineElement.style.color = 'gray'
+                  lineElement.style.color = 'lemonchiffon'
                   lineElement.classList.add('fadein'); // Aplicar la clase para el efecto de fadeIn
                   $historia.appendChild(lineElement);
                   lineElement.scrollIntoView({ behavior: "smooth" });
