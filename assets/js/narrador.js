@@ -2,7 +2,7 @@ import { Personaje } from "./personaje.js";
 import { Escena } from "./escena.js";
 
 export class Narrador extends Personaje{
-
+  
     static idioma = 'Español'
 
     constructor(nombre){
