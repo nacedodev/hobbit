@@ -1,5 +1,5 @@
-import { Alex } from "./Alex.js"
-import { IA } from "./IA.js"
+import { Alex } from "./alex.js"
+import { IA } from "./ia.js"
 import {especialidades , origenes} from "./especialidad_origen.js"
 import { Narrador } from "./narrador.js"
 

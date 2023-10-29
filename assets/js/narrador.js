@@ -1,6 +1,7 @@
 import { Personaje } from "./personaje.js";
 import { Escena } from "./escena.js";
 
+
 export class Narrador extends Personaje{
   
     static idioma = 'Español'
@@ -17,7 +18,7 @@ export class Narrador extends Personaje{
               const lineElement = document.createElement('p');
               lineElement.innerHTML = textoMejorado;
               lineElement.classList.add('fadein'); // Aplicar la clase para el efecto de fadeIn
-              historia.appendChild(lineElement);
+              lineElement.appendChild(lineElement);
               lineElement.scrollIntoView({ behavior: "smooth" });
 
             }, Personaje.timeout);

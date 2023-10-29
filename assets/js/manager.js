@@ -1,7 +1,7 @@
 import { Escena } from "./escena.js";
 import * as cast from './cast.js';
 import * as props from './props.js'
-import { IA } from "./IA.js";
+import { IA } from "./ia.js";
 import { progressBar } from "./progressBar.js";
 import { Personaje } from "./personaje.js";
 import * as arsenal from './arsenal.js'

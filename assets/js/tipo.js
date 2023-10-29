@@ -1,4 +1,5 @@
 import { Arma } from "./arma.js"
+import { Personaje } from "./personaje.js";
 
 export class Tipo extends Arma {
     constructor(nombre, daño, tipo) {
